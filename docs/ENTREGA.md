@@ -15,20 +15,22 @@
 - Compilação com prefixo `/NEXUS-BRASIL` testada para GitHub Pages.
 - Auditoria das dependências corrigida até zero vulnerabilidades reportadas nesta data.
 - Fontes públicas do panorama conferidas, com datas preservadas.
+- GitHub Pages ativado em 08/09/2026, com HTTPS obrigatório e implantação bem-sucedida do commit `c4c5ad124ccf5c898aa9d8314af2a762c610710e`.
+- Endereço público, 11 páginas principais e amostra de documentos/arquivos responderam HTTP 200; catálogo servido com 46 propostas e SHA-256 igual ao repositório.
 
 ## Limitações e próximos gates
 
 - Não foi realizado ensaio visual e de cliques em navegador; não foi explicitamente solicitado. O acesso à rota local para verificar a integração WebMCP foi bloqueado pelo navegador (`ERR_BLOCKED_BY_CLIENT`), portanto o filtro WebMCP não foi validado. Busca e filtros visuais usam o mesmo estado React.
 - Nenhum registro central, autenticação de membros, verificação de e-mail ou bloqueio entre dispositivos está ativo. Não há importação automática dos resultados do site anterior.
 - Dados de candidatos, históricos privados e respostas individuais não estão no repositório. O questionário não foi validado psicometricamente.
-- Configuração administrativa de GitHub Pages e URL pública precisam de verificação na conta. O conector disponível não altera a opção Pages. A revisão automática impediu inspeção do Chrome quando a página visível permanecia fora do GitHub. Não houve nova leitura dessa página.
+- GitHub Pages e URL pública foram confirmados; detalhes e evidência da execução estão no [registro de publicação](PUBLICACAO.md).
 - A prévia Sites usa audiência privada do proprietário; isso não equivale a publicação pública no GitHub Pages.
 - O site não confirma composição institucional, parcerias, receitas, despesas, estatuto registrado ou execução de pilotos.
 
 ## Retomada
 
-1. Conferir o último workflow em GitHub Actions.
-2. Ativar Settings → Pages → GitHub Actions, caso ainda não configurado.
-3. Executar novamente o workflow e verificar início, rotas secundárias, filtros e avaliação no endereço publicado.
+1. Abrir o [site público](https://aldenirfilho.github.io/NEXUS-BRASIL/) e consultar o último workflow em GitHub Actions.
+2. Realizar revisão visual e de interação em computador e celular, incluindo filtros e avaliação, sem usar dados reais de candidatos.
+3. Definir a próxima revisão editorial e institucional antes de ampliar funcionalidades de cadastro.
 
 Não duplicar o projeto nem copiar materiais brutos para a pasta pública. Futuras mudanças devem preservar as versões e as limitações da avaliação.

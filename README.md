@@ -4,6 +4,8 @@ Portal cívico de pessoas, ideias e soluções. Iniciativa em construção, com 
 
 **Este repositório é a base principal do site e de sua documentação.** O código, os documentos institucionais públicos e as orientações de manutenção ficam versionados juntos na branch `main`.
 
+**Site público:** [Abrir NEXUS Brasil](https://aldenirfilho.github.io/NEXUS-BRASIL/). GitHub Pages ativado e publicação verificada em 08/09/2026.
+
 ## Comece aqui
 
 - [Índice de toda a documentação](docs/README.md)

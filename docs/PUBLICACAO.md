@@ -2,11 +2,17 @@
 
 ## Estado registrado em 08/09/2026
 
-O código completo da versão 4.0 está em `main`, no commit `bc8744baba0bdc7571a83a6dca58f751d49a09da`. A [execução de implantação dessa versão](https://github.com/aldenirfilho/NEXUS-BRASIL/actions/runs/34207064429) concluiu a etapa de validação e compilação. A etapa de configuração do Pages falhou com `Not Found`, indicando que a configuração administrativa precisava ser concluída.
+**Publicado:** [NEXUS Brasil no GitHub Pages](https://aldenirfilho.github.io/NEXUS-BRASIL/).
 
-Este é um registro histórico daquela execução. Consulte [GitHub Actions](https://github.com/aldenirfilho/NEXUS-BRASIL/actions) para o estado atual. A existência dos arquivos no repositório não confirma que um endereço público do site esteja ativo.
+O Pages foi ativado com `build_type: workflow`, site público e HTTPS obrigatório. A [implantação confirmada](https://github.com/aldenirfilho/NEXUS-BRASIL/actions/runs/34219126842) terminou com sucesso às 08h15 de 08/09/2026 (America/Fortaleza), publicando o commit `c4c5ad124ccf5c898aa9d8314af2a762c610710e`.
+
+A verificação externa após a implantação confirmou HTTP 200 nas 11 páginas principais, na ementa, no canvas, no termo de adesão, no catálogo JSON e na ilustração de abertura. As 46 propostas do JSON público coincidiram por SHA-256 com o arquivo do repositório.
+
+As primeiras tentativas falharam porque o Pages ainda não estava ativado. Essa pendência foi resolvida. Consulte [GitHub Actions](https://github.com/aldenirfilho/NEXUS-BRASIL/actions) para o estado de atualizações posteriores.
 
 ## Ativação inicial do Pages
+
+Configuração já concluída neste repositório. As etapas abaixo ficam como referência de manutenção:
 
 1. Entre no GitHub com uma conta que administre o repositório.
 2. Abra [Settings → Pages](https://github.com/aldenirfilho/NEXUS-BRASIL/settings/pages).
