@@ -2,6 +2,17 @@
 
 Portal cívico de pessoas, ideias e soluções. Iniciativa em construção, com foco inicial em Sobral e expansão responsável para Ceará e Brasil.
 
+**Este repositório é a base principal do site e de sua documentação.** O código, os documentos institucionais públicos e as orientações de manutenção ficam versionados juntos na branch `main`.
+
+## Comece aqui
+
+- [Índice de toda a documentação](docs/README.md)
+- [Ementa institucional pública](public/documentos/ementa-nexus-brasil.md)
+- [Modelos editáveis para projetos e reuniões](public/documentos/README.md)
+- [Estrutura do site e onde editar](docs/ARQUITETURA.md)
+- [Publicação no GitHub Pages e recuperação de versões](docs/PUBLICACAO.md)
+- [Entrega, verificações e limitações](docs/ENTREGA.md)
+
 ## Conteúdo
 
 - Identidade, missão, valores, manifesto e governança.
@@ -42,4 +53,4 @@ O índice de consistência é heurístico e não mede honestidade. O instrumento
 
 Propostas não são realizações. Não publicar acusações, dados sigilosos ou estatísticas sem fonte direta e data-base. Custos e responsáveis desconhecidos ficam como pendentes. Não presumir composição de cargos, parcerias, registro jurídico ou prestação de contas realizada.
 
-Consulte `docs/ENTREGA.md`, `SECURITY.md` e `CONTRIBUTING.md` para manutenção e limitações.
+Consulte o [índice de documentação](docs/README.md), a [política de segurança](SECURITY.md) e o [guia de contribuição](CONTRIBUTING.md) para manutenção e limitações.
