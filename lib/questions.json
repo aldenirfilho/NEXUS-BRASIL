@@ -1,0 +1,182 @@
+[
+  {
+    "id": 0,
+    "dimension": "coragem",
+    "text": "Mesmo com receio de críticas, consigo defender com respeito aquilo que considero correto.",
+    "reverse": false
+  },
+  {
+    "id": 1,
+    "dimension": "coragem",
+    "text": "Prefiro ficar calado diante de um erro evitável apenas para não gerar desconforto.",
+    "reverse": true
+  },
+  {
+    "id": 2,
+    "dimension": "coragem",
+    "text": "Consigo tomar uma decisão difícil depois de reunir informação suficiente, mesmo sem certeza absoluta.",
+    "reverse": false
+  },
+  {
+    "id": 3,
+    "dimension": "coragem",
+    "text": "Evito assumir responsabilidade quando existe uma chance real de fracasso.",
+    "reverse": true
+  },
+  {
+    "id": 4,
+    "dimension": "coragem",
+    "text": "Consigo dizer “não” à pressão do grupo quando um princípio importante está em jogo.",
+    "reverse": false
+  },
+  {
+    "id": 5,
+    "dimension": "humildade",
+    "text": "Consigo admitir de forma clara quando estava errado.",
+    "reverse": false
+  },
+  {
+    "id": 6,
+    "dimension": "humildade",
+    "text": "Quando alguém critica minha ideia, minha primeira reação costuma ser desqualificar a pessoa.",
+    "reverse": true
+  },
+  {
+    "id": 7,
+    "dimension": "humildade",
+    "text": "Procuro deliberadamente ouvir pessoas que pensam diferente de mim.",
+    "reverse": false
+  },
+  {
+    "id": 8,
+    "dimension": "humildade",
+    "text": "Quando sei mais sobre um assunto, tendo a considerar pouco útil a opinião de quem sabe menos.",
+    "reverse": true
+  },
+  {
+    "id": 9,
+    "dimension": "humildade",
+    "text": "Mudo de opinião quando a evidência é melhor do que meu argumento original.",
+    "reverse": false
+  },
+  {
+    "id": 10,
+    "dimension": "resiliencia",
+    "text": "Depois de um revés, consigo retornar a uma ação útil sem permanecer paralisado por muito tempo.",
+    "reverse": false
+  },
+  {
+    "id": 11,
+    "dimension": "resiliencia",
+    "text": "Uma falha costuma me fazer abandonar um projeto que ainda é importante.",
+    "reverse": true
+  },
+  {
+    "id": 12,
+    "dimension": "resiliencia",
+    "text": "Sob pressão, consigo separar fatos de emoções antes de agir.",
+    "reverse": false
+  },
+  {
+    "id": 13,
+    "dimension": "resiliencia",
+    "text": "Consigo manter comportamento construtivo mesmo quando os resultados demoram mais do que eu gostaria.",
+    "reverse": false
+  },
+  {
+    "id": 14,
+    "dimension": "resiliencia",
+    "text": "Quando algo dá errado, gasto mais energia procurando culpados do que soluções.",
+    "reverse": true
+  },
+  {
+    "id": 15,
+    "dimension": "disciplina",
+    "text": "Cumpro compromissos importantes mesmo quando a motivação está baixa.",
+    "reverse": false
+  },
+  {
+    "id": 16,
+    "dimension": "disciplina",
+    "text": "Começo muitas tarefas e frequentemente deixo a mais importante inacabada.",
+    "reverse": true
+  },
+  {
+    "id": 17,
+    "dimension": "disciplina",
+    "text": "Organizo prioridades e prazos em vez de depender apenas da memória.",
+    "reverse": false
+  },
+  {
+    "id": 18,
+    "dimension": "disciplina",
+    "text": "Consigo adiar uma recompensa imediata para terminar algo importante.",
+    "reverse": false
+  },
+  {
+    "id": 19,
+    "dimension": "disciplina",
+    "text": "Minhas rotinas desaparecem assim que a semana fica difícil.",
+    "reverse": true
+  },
+  {
+    "id": 20,
+    "dimension": "lealdade",
+    "text": "Protejo informações legitimamente confidenciais que me foram confiadas.",
+    "reverse": false
+  },
+  {
+    "id": 21,
+    "dimension": "lealdade",
+    "text": "Minha lealdade muda com facilidade conforme quem pode me oferecer mais vantagem.",
+    "reverse": true
+  },
+  {
+    "id": 22,
+    "dimension": "lealdade",
+    "text": "Consigo discordar de um colega sem humilhar, sabotar ou expor desnecessariamente a pessoa.",
+    "reverse": false
+  },
+  {
+    "id": 23,
+    "dimension": "lealdade",
+    "text": "Se um amigo cometer um erro ético grave, prefiro protegê-lo mesmo que isso prejudique os princípios do grupo.",
+    "reverse": true
+  },
+  {
+    "id": 24,
+    "dimension": "lealdade",
+    "text": "Cumpro o que combinei ou aviso com antecedência quando percebo que não conseguirei cumprir.",
+    "reverse": false
+  },
+  {
+    "id": 25,
+    "dimension": "identidade",
+    "text": "Antes de propor uma solução, prefiro entender o problema e escutar quem é afetado por ele.",
+    "reverse": false
+  },
+  {
+    "id": 26,
+    "dimension": "identidade",
+    "text": "Valorizo medir e corrigir resultados mais do que defender uma ideia apenas porque ela foi minha.",
+    "reverse": false
+  },
+  {
+    "id": 27,
+    "dimension": "identidade",
+    "text": "Eu participaria de um projeto útil mesmo que meu nome nunca aparecesse publicamente.",
+    "reverse": false
+  },
+  {
+    "id": 28,
+    "dimension": "identidade",
+    "text": "Poder, status e protagonismo são mais importantes do que serviço e resultado concreto.",
+    "reverse": true
+  },
+  {
+    "id": 29,
+    "dimension": "identidade",
+    "text": "Consigo trabalhar com pessoas competentes que discordam de mim, desde que haja ética e respeito.",
+    "reverse": false
+  }
+]
