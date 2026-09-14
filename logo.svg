@@ -1,0 +1,27 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="200" height="200" fill="#1a1a1a" rx="20"/>
+  
+  <!-- Círculo principal - Estilo Nescau -->
+  <circle cx="100" cy="100" r="85" fill="#8B4513" stroke="#D4A574" stroke-width="3"/>
+  
+  <!-- Padrão de chocolate (linhas diagonais) -->
+  <g opacity="0.3" stroke="#1a1a1a" stroke-width="1">
+    <line x1="30" y1="70" x2="80" y2="30"/>
+    <line x1="50" y1="80" x2="100" y2="40"/>
+    <line x1="70" y1="90" x2="120" y2="50"/>
+    <line x1="90" y1="100" x2="140" y2="60"/>
+    <line x1="110" y1="110" x2="160" y2="70"/>
+    <line x1="130" y1="120" x2="170" y2="90"/>
+  </g>
+  
+  <!-- Letra "N" em branco -->
+  <text x="100" y="120" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="-5">N</text>
+  
+  <!-- Brasil em amarelo/ouro (referência à bandeira) -->
+  <circle cx="130" cy="70" r="18" fill="#FFD700" stroke="#D4A574" stroke-width="2"/>
+  <text x="130" y="78" font-size="20" font-weight="bold" fill="#8B4513" text-anchor="middle" font-family="Arial, sans-serif">BR</text>
+  
+  <!-- Subtítulo "NEXUS BRASIL" -->
+  <text x="100" y="180" font-size="12" font-weight="bold" fill="#FFD700" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="2">NEXUS BRASIL</text>
+</svg>
