@@ -1,12 +1,20 @@
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Fundo escuro -->
   <defs>
     <linearGradient id="earthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1e90ff;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0047ab;stop-opacity:1" />
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowEnergy">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feFlood flood-color="#FFFF00" result="coloredBlur2"/>
+      <feComposite in="coloredBlur2" in2="coloredBlur" operator="in" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -14,42 +22,48 @@
     </filter>
   </defs>
   
+  <!-- Fundo escuro (para identificação ideológica) -->
   <rect width="200" height="200" fill="#0a0a0a"/>
   
-  <!-- Raio de energia (N em forma de raio) -->
-  <g filter="url(#glow)" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <!-- Primeiro traço diagonal (cima-esquerda para baixo-direita) -->
-    <path d="M 50 40 L 120 150"/>
-    <!-- Segundo traço vertical -->
-    <path d="M 120 40 L 120 150"/>
-    <!-- Terceiro traço diagonal (baixo-direita para cima-esquerda) -->
-    <path d="M 50 150 L 120 50"/>
+  <!-- Raio de Energia formando "N" (centro-esquerda) -->
+  <g filter="url(#glowEnergy)" stroke="#FFFF00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Traço vertical esquerdo -->
+    <line x1="45" y1="40" x2="45" y2="160"/>
+    <!-- Traço diagonal -->
+    <line x1="45" y1="160" x2="95" y2="40"/>
+    <!-- Traço vertical direito -->
+    <line x1="95" y1="40" x2="95" y2="160"/>
   </g>
   
-  <!-- Efeito de raio/energia ao redor do N -->
-  <g opacity="0.6" stroke="#FFFF00" stroke-width="1" fill="none">
-    <circle cx="85" cy="95" r="45" stroke-dasharray="5,5"/>
+  <!-- Borda branca do raio para mais definição -->
+  <g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7">
+    <!-- Traço vertical esquerdo -->
+    <line x1="45" y1="40" x2="45" y2="160"/>
+    <!-- Traço diagonal -->
+    <line x1="45" y1="160" x2="95" y2="40"/>
+    <!-- Traço vertical direito -->
+    <line x1="95" y1="40" x2="95" y2="160"/>
   </g>
   
-  <!-- Planeta Terra (esfera) -->
-  <g transform="translate(140, 60)">
-    <!-- Esfera com gradiente azul (oceano) -->
-    <circle cx="0" cy="0" r="25" fill="url(#earthGradient)" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Planeta Terra (direita, compacto como ícone) -->
+  <g transform="translate(140, 100)">
+    <!-- Esfera com gradiente (oceano) -->
+    <circle cx="0" cy="0" r="28" fill="url(#earthGradient)" stroke="#FFFF00" stroke-width="2" filter="url(#glow)"/>
     
-    <!-- Continentes (simplificados) -->
-    <g fill="#2d8659" opacity="0.8">
-      <!-- América do Sul (verde) -->
-      <ellipse cx="-8" cy="8" rx="6" ry="10"/>
-      <!-- África (verde) -->
-      <ellipse cx="10" cy="5" rx="7" ry="9"/>
-      <!-- Europa (verde) -->
-      <ellipse cx="8" cy="-8" rx="4" ry="5"/>
+    <!-- Continentes (verde) -->
+    <g fill="#2d8659" opacity="0.9">
+      <ellipse cx="-10" cy="5" rx="7" ry="12"/>
+      <ellipse cx="12" cy="8" rx="8" ry="10"/>
+      <ellipse cx="10" cy="-10" rx="5" ry="6"/>
     </g>
     
-    <!-- Brilho na esfera -->
-    <circle cx="-8" cy="-8" r="8" fill="#FFFFFF" opacity="0.3"/>
+    <!-- Brilho especular (destaque) -->
+    <circle cx="-10" cy="-10" r="10" fill="#FFFFFF" opacity="0.35"/>
   </g>
   
-  <!-- Texto: NEXUS BRASIL -->
-  <text x="100" y="185" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="2">NEXUS BRASIL</text>
+  <!-- Anel de energia ao redor (identidade ideológica) -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FFFF00" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
+  
+  <!-- Marcador central secreto (sutil) -->
+  <circle cx="100" cy="100" r="2" fill="#FFFF00" opacity="0.5"/>
 </svg>
