@@ -1,1 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#164e3e"/><text x="12" y="47" font-family="Georgia,serif" font-size="46" font-weight="bold" fill="#fcfbf7">N</text><text x="32" y="29" font-family="Arial,sans-serif" font-size="30" fill="#eec94f">↗</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowEnergy">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feFlood flood-color="#FFFF00" result="coloredBlur2"/>
+      <feComposite in="coloredBlur2" in2="coloredBlur" operator="in" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fundo com gradiente escuro dinâmico -->
+  <rect width="64" height="64" rx="8" fill="url(#bgGradient)"/>
+  
+  <!-- Borda sutil -->
+  <rect width="64" height="64" rx="8" fill="none" stroke="#FFFF00" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Raio de Energia formando "N" (estilo minimalista) -->
+  <g filter="url(#glowEnergy)" stroke="#FFFF00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Traço vertical esquerdo -->
+    <line x1="16" y1="14" x2="16" y2="50"/>
+    <!-- Traço diagonal -->
+    <line x1="16" y1="50" x2="36" y2="14"/>
+    <!-- Traço vertical direito -->
+    <line x1="36" y1="14" x2="36" y2="50"/>
+  </g>
+  
+  <!-- Borda branca do raio para mais definição -->
+  <g stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6">
+    <!-- Traço vertical esquerdo -->
+    <line x1="16" y1="14" x2="16" y2="50"/>
+    <!-- Traço diagonal -->
+    <line x1="16" y1="50" x2="36" y2="14"/>
+    <!-- Traço vertical direito -->
+    <line x1="36" y1="14" x2="36" y2="50"/>
+  </g>
+  
+  <!-- Planeta Terra compacto (direita) -->
+  <g transform="translate(48, 32)">
+    <!-- Esfera com gradiente -->
+    <circle cx="0" cy="0" r="10" fill="#1e90ff" stroke="#FFFF00" stroke-width="1" filter="url(#glow)" opacity="0.9"/>
+    
+    <!-- Continentes -->
+    <g fill="#2d8659" opacity="0.95">
+      <ellipse cx="-3" cy="2" rx="2.5" ry="4"/>
+      <ellipse cx="4" cy="3" rx="2.8" ry="3.5"/>
+      <ellipse cx="3.5" cy="-3" rx="1.8" ry="2"/>
+    </g>
+    
+    <!-- Brilho especular -->
+    <circle cx="-3" cy="-3" r="3" fill="#FFFFFF" opacity="0.4"/>
+  </g>
+  
+  <!-- Anel de energia sutil -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#FFFF00" stroke-width="0.5" opacity="0.2"/>
+</svg>
