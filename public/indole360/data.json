@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-09-17",
+  "coverageNote": "Base piloto documental, não cadastro mundial. Relatórios financeiros anuais não equivalem a auditoria socioambiental. Dados de 2026 ainda não integrados.",
+  "sources": {
+    "hp25": {
+      "title": "HP — resultados anuais de 2025",
+      "publisher": "HP Inc. / Relações com Investidores",
+      "publishedAt": "2025-11-25",
+      "accessedAt": "2026-09-17",
+      "type": "Comunicado corporativo primário; tabelas identificadas como não auditadas",
+      "url": "https://investor.hp.com/news-events/news/news-details/2025/HP-Inc--Reports-Fiscal-2025-Full-Year-and-Fourth-Quarter-Results/default.aspx",
+      "scope": "Identidade HPQ/NYSE; resultados GAAP anuais 2024 e 2025; P&D; fluxo de caixa anual. Não sustenta avaliação de impacto ou nota de conduta."
+    },
+    "nu25": {
+      "title": "Nu — resultados anuais de 2025",
+      "publisher": "Nu Holdings Ltd.",
+      "publishedAt": "2026-02-25",
+      "accessedAt": "2026-09-17",
+      "type": "Comunicado corporativo primário; valores de destaque arredondados",
+      "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-fourth-quarter-and-full-year-2025-financial-results",
+      "scope": "Identidade NU/NYSE e lucro líquido IFRS de 2025 arredondado; documento também apresenta resultados gerenciais. Receita não transcrita para evitar mistura de bases."
+    },
+    "nu24": {
+      "title": "Nu — resultados anuais de 2024",
+      "publisher": "Nu Holdings Ltd.",
+      "publishedAt": null,
+      "accessedAt": "2026-09-17",
+      "type": "Comunicado corporativo; informação recuperada no índice de busca, página não reaberta",
+      "url": "https://international.nubank.com.br/company/nu-holdings-ltd-reports-fourth-quarter-and-full-year-2024-financial-results/",
+      "scope": "Lucros líquidos de 2023 e 2024 e receita de 2024 nos destaques. Reabertura/checagem com 20-F pendente."
+    }
+  },
+  "companies": [
+    {
+      "id": "hp",
+      "name": "HP",
+      "legalName": "HP Inc.",
+      "sector": "Tecnologia",
+      "brands": ["HP"],
+      "products": ["computadores", "impressoras"],
+      "description": "A ficha reúne dados da HP Inc. e subsidiárias. Não deve ser confundida com a Hewlett Packard Enterprise.",
+      "identity": {
+        "exchange": "NYSE", "ticker": "HPQ", "source": "hp25",
+        "registry": null, "isin": null, "controller": null, "freeFloat": null,
+        "marketCap": null, "auditor": null,
+        "distribution": "Há pagamentos de dividendos e recompras no exercício de 2025. Política vigente, limites e estatuto ainda não revisados."
+      },
+      "review": {
+        "status": "partial", "date": "2026-09-17", "confidence": "D",
+        "note": "Pesquisa financeira inicial; 0 de 11 dimensões socioambientais com revisão concluída. Sem veredito de conduta."
+      },
+      "ratings": {}, "history": [], "legalCases": [], "projects": [], "claims": [], "criticalFlags": [],
+      "financial": {
+        "currency": "USD", "unit": "millions",
+        "basis": "US GAAP; consolidado; exercício encerrado em 31 de outubro. Tabelas do comunicado não auditadas.",
+        "notes": "Investimentos representam valor líquido em imobilizado e intangíveis adquiridos, não CAPEX bruto. Caixa final inclui equivalentes e caixa restrito. Ausência de valores sociais não significa ausência de ações. Não há reconciliação de todo o fluxo de caixa nesta ficha.",
+        "years": [
+          {"year": 2021, "profit": null, "revenue": null},
+          {"year": 2022, "profit": null, "revenue": null},
+          {"year": 2023, "profit": null, "revenue": null},
+          {
+            "year": 2024, "endDate": "2024-10-31", "revenue": 53559, "profit": 2775,
+            "dividends": 1075, "jcp": 0, "buybacks": 2100, "investment": 592,
+            "research": 1640, "socialOwn": null, "socialIncentive": null, "cash": 3253,
+            "source": "hp25", "notes": "JCP brasileiro não aplicável a esta série consolidada; zero usado exclusivamente para o cálculo de distribuição."
+          },
+          {
+            "year": 2025, "endDate": "2025-10-31", "revenue": 55295, "profit": 2529,
+            "dividends": 1088, "jcp": 0, "buybacks": 850, "investment": 897,
+            "research": 1602, "socialOwn": null, "socialIncentive": null, "cash": 3713,
+            "source": "hp25", "notes": "JCP brasileiro não aplicável a esta série consolidada; zero usado exclusivamente para o cálculo de distribuição."
+          }
+        ]
+      },
+      "gaps": [
+        "Série de 2021–2023 e parecer do auditor",
+        "Registro, controle, ISIN e valor de mercado vigente",
+        "Social próprio/incentivado, pessoas, natureza e bem-estar animal",
+        "Consumidor, propaganda, processos e direito de resposta"
+      ]
+    },
+    {
+      "id": "nubank", "name": "Nubank", "legalName": "Nu Holdings Ltd.",
+      "sector": "Serviços financeiros", "brands": ["Nubank", "Nu"],
+      "products": ["conta", "cartão", "serviços financeiros"],
+      "description": "Dados consolidados da holding. Não representam isoladamente a pessoa jurídica brasileira, um contrato ou um cliente.",
+      "identity": {
+        "exchange": "NYSE", "ticker": "NU", "source": "nu25",
+        "registry": null, "isin": null, "controller": null, "freeFloat": null,
+        "marketCap": null, "auditor": null, "distribution": null
+      },
+      "review": {
+        "status": "partial", "date": "2026-09-17", "confidence": "D",
+        "note": "Levantamento inicial, com valores arredondados e fonte histórica a reabrir. 0 de 11 dimensões socioambientais revisadas. Sem veredito de conduta."
+      },
+      "ratings": {}, "history": [], "legalCases": [], "projects": [], "claims": [], "criticalFlags": [],
+      "financial": {
+        "currency": "USD", "unit": "millions",
+        "basis": "Lucro líquido IFRS, consolidado; exercício encerrado em 31 de dezembro; destaques arredondados.",
+        "notes": "2023/2024 recuperados de comunicado indexado: reabertura e checagem com demonstrações completas pendentes. 2025 também contém apresentação gerencial: receita foi mantida ausente para não misturar bases. Juros são parte da atividade financeira, não prova de rentismo.",
+        "years": [
+          {"year": 2021, "profit": null, "revenue": null},
+          {"year": 2022, "profit": null, "revenue": null},
+          {"year": 2023, "endDate": "2023-12-31", "profit": 1030, "revenue": null, "source": "nu24", "approximate": true},
+          {"year": 2024, "endDate": "2024-12-31", "profit": 1970, "revenue": 11510, "source": "nu24", "approximate": true},
+          {"year": 2025, "endDate": "2025-12-31", "profit": 2900, "revenue": null, "source": "nu25", "approximate": true}
+        ]
+      },
+      "gaps": [
+        "Reabertura da fonte 2024 e conciliação com 20-F",
+        "Série 2021–2022, dividendos, investimentos e valores exatos",
+        "Identidade societária completa e documentação da listagem atual",
+        "Trabalho, inclusão, impacto ambiental, reclamações, processos e publicidade"
+      ]
+    }
+  ]
+}
