@@ -73,6 +73,7 @@ export function SiteFooter() {
             <a href={pathTo('/sobre/')}>Identidade e princípios</a>
             <a href={pathTo('/metodo/')}>Método NEXUS</a>
             <a href={pathTo('/biblioteca/')}>Biblioteca institucional</a>
+            <a href={pathTo('/indole360/')}>ÍNDOLE 360° · consumo consciente</a>
           </div>
           <div>
             <h3>Construa com a gente</h3>
