@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paradoxo Inexorável — Saúde para 6,9 bilhões × um ano de defesa</title>
+<meta name="description" content="Construir uma rede de CTIs e centros de neurodiversidade para Ásia, África e América do Sul custa cerca de US$ 160 bilhões: 16% de um ano do orçamento militar dos EUA. Números, método e fontes.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Saúde para 6,9 bilhões de pessoas custa 58 dias de defesa dos EUA">
+<meta property="og:description" content="Rede de 45.926 mini-CTIs e 183.704 centros de neurodiversidade: US$ 160 bi de obra. Defesa dos EUA: ≈ US$ 1 trilhão por ano. Saúde dos EUA: US$ 6 trilhões por ano.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b0d12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d12; --panel:#12151d; --panel-2:#171b25; --line:#2a2f3c;
+  --ink:#ece8de; --muted:#a9a596; --gold:#d4ad55; --gold-dim:#8f7537;
+  --cyan:#4cc9d6; --red:#e0705f; --green:#7fcf8f;
+  --serif:'Cinzel',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);
+  background-image:radial-gradient(ellipse at top,rgba(212,173,85,.08),transparent 60%);}
+a{color:var(--cyan)}
+a:hover{color:var(--gold)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{border-bottom:1px solid var(--line);padding:14px 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.crest{font-family:var(--serif);letter-spacing:.14em;font-size:.82rem;color:var(--gold);text-decoration:none}
+.crest b{color:var(--ink)}
+nav.toc{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem}
+nav.toc a{color:var(--muted);text-decoration:none}
+nav.toc a:hover{color:var(--gold)}
+
+.hero{padding:56px 0 36px;text-align:center}
+.eyebrow{font-family:var(--serif);color:var(--gold);letter-spacing:.22em;font-size:.78rem;text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(1.9rem,5.4vw,3.3rem);line-height:1.15;margin:.5em 0 .4em;font-weight:700}
+h1 em{font-style:normal;color:var(--gold)}
+.lede{max-width:720px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--gold-dim);margin:28px auto;max-width:420px}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent)}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 8px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:18px 18px 16px}
+.kpi.cyan{border-top-color:var(--cyan)} .kpi.red{border-top-color:var(--red)}
+.kpi .num{font-family:var(--serif);font-size:2rem;font-weight:700;line-height:1.1}
+.kpi .lbl{color:var(--muted);font-size:.92rem;margin-top:6px}
+
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-size:clamp(1.35rem,3.4vw,1.85rem);margin:0 0 .3em;color:var(--ink)}
+h2 .ico{margin-right:.35em}
+.sub{color:var(--muted);margin:0 0 22px;max-width:760px}
+h3{font-size:1.02rem;margin:22px 0 8px;color:var(--gold)}
+
+.tbl{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--panel-2);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.total td{font-weight:700;background:var(--panel-2)}
+.strong{font-weight:700;color:var(--ink)}
+
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.chart .cap{font-size:.88rem;color:var(--muted);margin:0 0 16px}
+.bar{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:12px;align-items:center;margin:12px 0}
+.bar .name{font-size:.92rem}
+.track{position:relative;height:30px;background:var(--panel-2);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.fill{height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:flex-end;padding-right:8px;min-width:46px;color:#16130b;font-weight:700;font-size:.85rem;font-variant-numeric:tabular-nums}
+.track .out{position:absolute;left:16px;top:0;line-height:28px;font-size:.85rem;font-weight:700;color:var(--gold)}
+.fill.cyan{background:linear-gradient(90deg,#2a7f88,var(--cyan))}
+.fill.year{background:repeating-linear-gradient(45deg,#2c313d,#2c313d 6px,#262a35 6px,#262a35 12px);color:var(--muted);justify-content:flex-start;padding-left:10px}
+.scale{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin:6px 0 0 calc(min(230px,40%) + 12px)}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h3{margin-top:0}
+.card p{margin:.4em 0 0;color:var(--muted)}
+.card .big{font-family:var(--serif);font-size:1.5rem;color:var(--ink);font-weight:700}
+
+.note{border-left:3px solid var(--cyan);background:rgba(76,201,214,.06);padding:14px 16px;border-radius:0 8px 8px 0;margin:18px 0;color:var(--ink)}
+.note.warn{border-left-color:var(--red);background:rgba(224,112,95,.07)}
+.note b{color:var(--gold)}
+ul.clean{padding-left:1.1em;margin:.4em 0}
+ul.clean li{margin:.35em 0}
+
+.share{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+button,.btn{font:600 .92rem var(--sans);border-radius:8px;padding:10px 16px;cursor:pointer;border:1px solid var(--gold);background:transparent;color:var(--gold);text-decoration:none}
+button.primary{background:var(--gold);color:#16130b}
+button:hover,.btn:hover{filter:brightness(1.12)}
+#toast{min-height:1.4em;text-align:center;color:var(--green);font-size:.88rem;margin-top:8px}
+
+.sources{columns:2 300px;column-gap:28px;font-size:.88rem}
+.sources h3{break-after:avoid}
+.sources ul{margin:0 0 14px;padding-left:1.1em}
+.sources li{margin:.25em 0;break-inside:avoid}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+footer .crest{display:inline-block;margin-bottom:8px}
+@media (max-width:560px){
+  .bar{grid-template-columns:1fr;gap:4px}
+  .scale{margin-left:0}
+  .kpi .num{font-size:1.7rem}
+}
+@media print{
+  body{background:#fff;color:#111}
+  .share,nav.toc{display:none}
+  .kpi,.card,.chart,.tbl{background:#fff;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="crest" href="../">⚜ <b>360X BRASIL</b></a>
+    <nav class="toc" aria-label="Seções">
+      <a href="#pacote">O pacote</a>
+      <a href="#rede">A rede</a>
+      <a href="#contraste">Contraste</a>
+      <a href="#mercado">Mercado</a>
+      <a href="#limites">Limites</a>
+      <a href="#fontes">Fontes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Paradoxos inexoráveis · outubro de 2026</div>
+    <h1>Saúde de perto para 6,9 bilhões de pessoas custa <em>58 dias</em> de defesa dos EUA</h1>
+    <p class="lede">Uma rede de mini-CTIs e centros de neurodiversidade cobrindo Ásia, África e América do Sul custaria cerca de <strong>US$ 160 bilhões</strong> de obra: <strong>16% de um único ano</strong> do orçamento militar americano.</p>
+    <div class="rule">⚜</div>
+    <div class="kpis">
+      <div class="kpi"><div class="num">US$ 160 bi</div><div class="lbl">🏗️ Obra da rede para Ásia, África e América do Sul</div></div>
+      <div class="kpi red"><div class="num">≈ US$ 1 tri</div><div class="lbl">🪖 Defesa dos EUA por ano (ano fiscal 2026, vigente)</div></div>
+      <div class="kpi cyan"><div class="num">US$ 6,0 tri</div><div class="lbl">🏥 Gasto nacional em saúde dos EUA em 2026</div></div>
+    </div>
+    <div class="share">
+      <button class="primary" id="shareBtn" type="button">📤 Compartilhar</button>
+      <button id="copyBtn" type="button">🔗 Copiar link</button>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <section id="pacote">
+    <h2><span class="ico">🧱</span>O pacote: saúde perto de casa</h2>
+    <p class="sub">A unidade de cálculo é um território de cerca de <strong>150 mil pessoas</strong>. Cada um recebe um mini-hospital de alta complexidade e quatro centros de diagnóstico precoce de neurodesenvolvimento, convertidos a partir das unidades básicas existentes.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Peça</th><th class="n">Obra (uma vez)</th><th class="n">Custeio mensal</th></tr></thead>
+      <tbody>
+        <tr><td>🏥 1 mini-CTI de 10 leitos, porta de urgência e 2 salas cirúrgicas, sem tomógrafo</td><td class="n">R$ 15,2 milhões</td><td class="n">R$ 900 mil</td></tr>
+        <tr><td>🧠 4 centros de neurodiversidade (R$ 550 mil e R$ 145 mil/mês cada)</td><td class="n">R$ 2,2 milhões</td><td class="n">R$ 580 mil</td></tr>
+        <tr class="total"><td>Pacote por território</td><td class="n">R$ 17,4 milhões</td><td class="n">R$ 1,48 milhão</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>Premissas:</b> preços do Nordeste brasileiro em 2026, tecnologia intermediária (ventilador nacional, ultrassom à beira do leito no lugar de tomografia), ocupação de 8 dos 10 leitos e equipe completa de enfermagem. Densidade resultante: 6,7 leitos de terapia intensiva por 100 mil habitantes.</p>
+  </section>
+
+  <section id="rede">
+    <h2><span class="ico">🌍</span>A rede: Ásia, África e América do Sul</h2>
+    <p class="sub">População em 1º de julho de 2026 (projeção da ONU), dividida por 150 mil pessoas por território.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Região</th><th class="n">População</th><th class="n">Pacotes</th><th class="n">Leitos de CTI</th><th class="n">Obra</th></tr></thead>
+      <tbody>
+        <tr><td>Ásia</td><td class="n">4,86 bilhões</td><td class="n">32.422</td><td class="n">324.220</td><td class="n">R$ 564 bi</td></tr>
+        <tr><td>África</td><td class="n">1,58 bilhão</td><td class="n">10.567</td><td class="n">105.670</td><td class="n">R$ 184 bi</td></tr>
+        <tr><td>América do Sul</td><td class="n">440 milhões</td><td class="n">2.937</td><td class="n">29.370</td><td class="n">R$ 51 bi</td></tr>
+        <tr class="total"><td>As três regiões</td><td class="n">6,89 bilhões</td><td class="n">45.926</td><td class="n">459.260</td><td class="n">R$ 799 bi</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>🧠 Neurodiversidade</h3><div class="big">183.704 centros</div><p>Diagnóstico e acompanhamento precoce de crianças com TDAH e outros transtornos do neurodesenvolvimento.</p></div>
+      <div class="card"><h3>🇧🇷 Só o Brasil</h3><div class="big">1.425 pacotes</div><p>Cerca de metade da América do Sul. Obra de R$ 24,8 bilhões (≈ US$ 5 bilhões).</p></div>
+      <div class="card"><h3>🌐 Planeta inteiro</h3><div class="big">55.338 pacotes</div><p>Para 8,30 bilhões de pessoas: R$ 963 bilhões de obra (≈ US$ 193 bilhões).</p></div>
+    </div>
+  </section>
+
+  <section id="contraste">
+    <h2><span class="ico">⚖️</span>O contraste</h2>
+    <p class="sub">Câmbio de referência: US$ 1 = R$ 4,985 (outubro de 2026). Defesa dos EUA de ≈ US$ 1 trilhão no ano fiscal 2026 e gasto nacional em saúde de US$ 6,0 trilhões em 2026.</p>
+
+    <div class="chart" role="img" aria-label="Dias de orçamento militar dos EUA equivalentes a cada custo: obra das três regiões 58 dias, um ano de custeio 60 dias, obra do planeta 70 dias, obra do Brasil 2 dias, de um ano de 365 dias.">
+      <p class="cap">Quantos dias do orçamento militar dos EUA pagam cada item (barra cheia = 1 ano = 365 dias)</p>
+      <div class="bar"><div class="name">🏗️ Obra das três regiões</div><div class="track"><div class="fill" style="width:15.9%">58 dias</div></div></div>
+      <div class="bar"><div class="name">⚙️ 1 ano da rede ligada</div><div class="track"><div class="fill cyan" style="width:16.4%">60 dias</div></div></div>
+      <div class="bar"><div class="name">🌐 Obra do planeta inteiro</div><div class="track"><div class="fill" style="width:19.3%">70 dias</div></div></div>
+      <div class="bar"><div class="name">🇧🇷 Obra do Brasil</div><div class="track"><div class="fill" style="width:0.5%;min-width:6px;padding:0"></div><span class="out">2 dias</span></div></div>
+      <div class="bar"><div class="name">🪖 Um ano de defesa</div><div class="track"><div class="fill year" style="width:100%">365 dias ≈ US$ 1 trilhão</div></div></div>
+    </div>
+
+    <h3>Em números</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>O que</th><th class="n">Custo</th><th>Equivale a</th></tr></thead>
+      <tbody>
+        <tr><td>🏗️ Obra das três regiões</td><td class="n">≈ US$ 160 bi</td><td>16% de um ano de defesa · 2,7% de um ano de saúde (≈ 10 dias)</td></tr>
+        <tr><td>⚙️ Manter a rede ligada por 1 ano</td><td class="n">≈ US$ 164 bi</td><td>16% da defesa · 2,7% da saúde</td></tr>
+        <tr><td>🌐 Obra para o planeta inteiro</td><td class="n">≈ US$ 193 bi</td><td>19% de um ano de defesa (≈ 70 dias)</td></tr>
+        <tr><td>🇧🇷 Obra do Brasil</td><td class="n">≈ US$ 5 bi</td><td>0,5% de um ano de defesa (≈ 2 dias)</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>🪖 O aumento pedido para 2027</h3><div class="big">US$ 500 bi</div><p>De ≈ US$ 1 trilhão para US$ 1,5 trilhão, ainda não aprovado. Pagaria a obra das três regiões e mais 2 anos de funcionamento.</p></div>
+      <div class="card"><h3>🎖️ Só o Exército, pedido 2027</h3><div class="big">US$ 252,8 bi</div><p>Pagaria a obra e ainda sobrariam cerca de 7 meses de custeio da rede.</p></div>
+      <div class="card"><h3>🧠 Um trimestre de memória RAM</h3><div class="big">US$ 97 bi</div><p>Receita do setor de memória no 1º trimestre de 2026, impulsionada pela IA: 60% da obra.</p></div>
+    </div>
+  </section>
+
+  <section id="mercado">
+    <h2><span class="ico">💰</span>O tamanho do mercado americano</h2>
+    <p class="sub">Somando classes de ativos que não se sobrepõem, o mercado dos EUA acumula cerca de <strong>US$ 151 trilhões</strong>, ou R$ 752,7 trilhões. A obra da rede das três regiões equivale a 0,11% desse valor.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Classe</th><th class="n">Valor estimado</th><th>Data-base</th></tr></thead>
+      <tbody>
+        <tr><td>📈 Ações listadas (NYSE, Nasdaq, OTCQX)</td><td class="n">≈ US$ 76,7 tri</td><td>out/2026*</td></tr>
+        <tr><td>🏦 Renda fixa (títulos públicos, corporativos, municipais, hipotecários)</td><td class="n">≈ US$ 63 tri</td><td>2º tri/2026*</td></tr>
+        <tr><td>🔒 Mercados privados (América do Norte)</td><td class="n">US$ 8,46 tri</td><td>meados/2025</td></tr>
+        <tr><td>🪙 Criptoativos (mundo)</td><td class="n">US$ 2,6 tri</td><td>31/08/2026</td></tr>
+        <tr class="total"><td>Total</td><td class="n">≈ US$ 151 tri</td><td>estimativa</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">* Estimativas do projeto: o valor das ações aplica a alta do S&amp;P 500 no 3º trimestre ao total de 1º/jul (US$ 75,3 tri); a renda fixa soma o dado do 2º trimestre sem hipotecários (US$ 51,4 tri) a ≈ US$ 11,6 tri de títulos lastreados. Fundos e ETFs não entram na soma, pois detêm as ações e títulos acima. Não existe número oficial único.</p>
+    <p>Em tese, esse estoque repetiria a obra da rede <strong>942 vezes</strong>, ou a manteria funcionando por cerca de <strong>920 anos</strong>. A seção abaixo explica por que isso é teórico.</p>
+  </section>
+
+  <section id="limites">
+    <h2><span class="ico">🧭</span>O que os números não dizem</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>🧱 Estoque não é caixa</h3>
+        <ul class="clean">
+          <li>Os US$ 151 trilhões são <strong>valor de mercado</strong>, não dinheiro disponível.</li>
+          <li>US$ 63 trilhões são dívida: o ativo de um é o passivo de outro, e cerca de metade é do próprio governo americano (US$ 31,1 tri em títulos do Tesouro).</li>
+          <li>Ações não viram caixa em massa: vender tudo derruba o preço.</li>
+          <li>A comparação honesta é com <strong>gasto anual</strong>, e mesmo assim a rede custa 16% da defesa.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>👩‍⚕️ O gargalo real é gente</h3>
+        <p style="color:var(--ink)">Cobrir as três regiões uma vez exige:</p>
+        <ul class="clean">
+          <li><strong>551 mil</strong> enfermeiros (12 por unidade)</li>
+          <li><strong>919 mil</strong> técnicos de enfermagem (20 por unidade)</li>
+          <li><strong>276 mil</strong> fisioterapeutas (6 por unidade)</li>
+          <li><strong>45.926</strong> postos de intensivista 24 h</li>
+        </ul>
+        <p>O dinheiro deixa de ser o limite já na primeira cobertura. Formar essa equipe leva anos, não orçamento.</p>
+      </div>
+    </div>
+    <p class="note warn"><b>Simplificação declarada:</b> os custos usam preços do Nordeste brasileiro aplicados a todos os países. Obra, salários e equipamentos variam muito entre regiões, e o cálculo não inclui logística, importação, energia em áreas sem rede elétrica estável nem formação profissional. Os números servem para comparar ordens de grandeza, não como orçamento executivo.</p>
+  </section>
+
+  <section id="fontes">
+    <h2><span class="ico">📚</span>Método e fontes</h2>
+    <p class="sub">Dados públicos consultados até 10/10/2026. Custos da rede são estimativas do 360X Brasil com as premissas acima; os demais valores seguem as fontes abaixo.</p>
+    <div class="sources">
+      <h3>Defesa e saúde dos EUA</h3>
+      <ul>
+        <li><a href="https://www.akingump.com/en/insights/blogs/the-approps-drop/defense-funding-update-fy-2026-vs-fy-2027-toplines" rel="noopener">Akin – FY2026 vs FY2027 toplines</a></li>
+        <li><a href="https://breakingdefense.com/2026/04/trump-to-propose-1-5-trillion-defense-budget-banking-on-350-billion-from-reconciliation/" rel="noopener">Breaking Defense – pedido de US$ 1,5 tri</a></li>
+        <li><a href="https://www.csis.org/analysis/unpacking-15-trillion-fy-2027-defense-budget-topline" rel="noopener">CSIS – FY2027 defense topline</a></li>
+        <li><a href="https://news.clearancejobs.com/?p=1165915" rel="noopener">ClearanceJobs – resolução provisória até 11/12/2026</a></li>
+        <li><a href="https://www.ausa.org/news/army-unveils-2528-billion-budget-fiscal-2027" rel="noopener">AUSA – orçamento do Exército 2027</a></li>
+        <li><a href="https://www.crfb.org/blogs/national-health-expenditures-continue-rise" rel="noopener">CRFB – projeções de gasto em saúde (CMS)</a></li>
+      </ul>
+      <h3>Mercado e memória</h3>
+      <ul>
+        <li><a href="https://siblisresearch.com/data/us-stock-market-value/" rel="noopener">Siblis Research – valor do mercado acionário</a></li>
+        <li><a href="https://pluang.com/en/news-feed/snapshot-kapitalisasi-pasar-sp-500-fall-2026" rel="noopener">Pluang – S&amp;P 500 no 3º trimestre de 2026</a></li>
+        <li><a href="https://www.sifma.org/news/blog/2026-capital-markets-fact-book-key-findings" rel="noopener">SIFMA – Capital Markets Fact Book 2026</a></li>
+        <li><a href="https://www.ftportfolios.com/Blogs/InvestBlog/2026/9/18/factoid---friday,-september-18,-2026" rel="noopener">First Trust – renda fixa no 2º trimestre de 2026</a></li>
+        <li><a href="https://www.wealthprofessional.ca/investments/alternative-investments/north-american-private-markets-regain-momentum-as-capital-rebounds-and-liquidity-themes-intensify/392026" rel="noopener">Preqin – mercados privados na América do Norte</a></li>
+        <li><a href="https://www.bernama.com/en/press/news.php?id=2604963" rel="noopener">Henley &amp; Partners – Crypto Wealth Report 2026</a></li>
+        <li><a href="https://aiweekly.co/alerts/trendforce-dram-prices-to-jump-63-again-in-q2" rel="noopener">AI Weekly – receita do setor de memória (TrendForce)</a></li>
+      </ul>
+      <h3>Câmbio e custos de referência</h3>
+      <ul>
+        <li><a href="https://portaldeprefeitura.com.br/bastidores-da-politica/dolar-recua-e-fecha-abaixo-de-r-5-pela-primeira-vez-desde-maio/633631/" rel="noopener">Dólar abaixo de R$ 5 em outubro de 2026</a></li>
+        <li>Custos de obra, equipamento e custeio: estimativas do projeto com referências de compras públicas 2024–2025 e tabela de UBS do Ministério da Saúde (2024).</li>
+        <li>Repasse federal de CAPSi: Portaria GM/MS 5.500/2024.</li>
+        <li>População 2026: projeções da ONU (World Population Prospects).</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="crest" href="../">⚜ 360X BRASIL</a>
+    <div>Idealização: Aldenir Rocha de Oliveira Filho · 360X Brasil · Publicado em 22/10/2026.</div>
+    <div>Comparação de ordens de grandeza com dados públicos. Não é orçamento executivo nem recomendação de investimento.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var title = document.title;
+  var text = 'Saúde perto de casa para 6,9 bilhões de pessoas custa 58 dias do orçamento militar dos EUA.';
+  var toast = document.getElementById('toast');
+  function say(msg){ toast.textContent = msg; setTimeout(function(){ toast.textContent=''; }, 3000); }
+  function copy(){
+    var url = location.href.split('#')[0];
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function(){ say('✅ Link copiado'); }, function(){ say(url); });
+    } else { say(url); }
+  }
+  document.getElementById('copyBtn').addEventListener('click', copy);
+  document.getElementById('shareBtn').addEventListener('click', function(){
+    var url = location.href.split('#')[0];
+    if (navigator.share) {
+      navigator.share({ title: title, text: text, url: url }).catch(function(){});
+    } else { copy(); }
+  });
+})();
+</script>
+</body>
+</html>
