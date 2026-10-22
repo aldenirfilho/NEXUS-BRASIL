@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carteira Brasil 360X: talento, saúde perto de casa e riquezas do país</title>
+<meta name="description" content="Quinze propostas em quatro eixos para educação, saúde e desenvolvimento do Brasil: identificação precoce de talento, TDAH no SUS, UBS com leitos, descentralização hospitalar e valorização do nióbio. Propostas em debate, nenhuma iniciada.">
+<meta name="theme-color" content="#10141B">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Carteira Brasil 360X">
+<meta property="og:description" content="Descobrir cedo o talento de cada pessoa, cuidar dela perto de casa e financiar isso com as riquezas do país.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:"Cinzel";src:url("fonts/cinzel-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Cinzel";src:url("fonts/cinzel-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url("fonts/alegreya-sans-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url("fonts/alegreya-sans-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Alegreya Sans";src:url("fonts/alegreya-sans-latin-700-normal.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+:root{
+  --obsidiana:#10141B;
+  --onix:#171D27;
+  --onix-2:#1F2633;
+  --ouro:#C8A55A;
+  --ouro-claro:#E4CB8C;
+  --ciano:#4FD1D9;
+  --pergaminho:#ECE4CF;
+  --pergaminho-suave:#BDB5A1;
+  --lacre:#D2604E;
+  --ambar:#DDAA45;
+  --linha:rgba(200,165,90,.30);
+  --titulo:"Cinzel",Georgia,"Times New Roman",serif;
+  --texto:"Alegreya Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 600px at 12% -10%,#1B2433 0%,transparent 60%),
+    var(--obsidiana);
+  color:var(--pergaminho);
+  font-family:var(--texto);
+  font-size:1.125rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--ciano);text-underline-offset:.18em}
+a:hover{color:#8BE6EB}
+:focus-visible{outline:2px solid var(--ciano);outline-offset:3px;border-radius:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.saltar{position:absolute;left:-999px;top:8px;background:var(--ouro);color:var(--obsidiana);padding:.5rem .9rem;z-index:20;font-weight:700}
+.saltar:focus{left:12px}
+.moldura{width:min(1120px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.2;color:var(--ouro-claro);margin:0}
+p{margin:0 0 1rem}
+
+/* Topo */
+.topo{border-bottom:1px solid var(--linha)}
+.topo .moldura{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;flex-wrap:wrap}
+.marca{font-family:var(--titulo);font-weight:600;color:var(--ouro);letter-spacing:.06em;text-decoration:none;font-size:1.05rem}
+.marca:hover{color:var(--ouro-claro)}
+.topo nav a{font-size:1rem}
+
+/* Abertura */
+.abertura{padding:3rem 0 2.5rem}
+.abertura .moldura{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:3rem;align-items:center}
+.brasao{width:100%;height:auto;display:block}
+.brasao .q{transition:filter .2s}
+.brasao a:hover .q{filter:brightness(1.35)}
+.brasao a:focus{outline:none}
+.brasao a:focus-visible .q{stroke:var(--ciano);stroke-width:4}
+.brasao .contorno{stroke-dasharray:1;stroke-dashoffset:1;animation:gravar 1.8s ease-out .2s forwards}
+@keyframes gravar{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.brasao .contorno{animation:none;stroke-dashoffset:0}}
+.abertura h1{font-size:clamp(2.2rem,5.2vw,3.7rem);letter-spacing:.02em;margin-bottom:1rem}
+.tese{font-size:clamp(1.25rem,2.2vw,1.5rem);line-height:1.45;max-width:36ch;color:var(--pergaminho);margin-bottom:1.2rem}
+.lema{color:var(--pergaminho-suave);max-width:60ch}
+.situacao{border-left:3px solid var(--ouro);padding:.6rem 1rem;background:rgba(200,165,90,.07);max-width:60ch;margin:1.4rem 0}
+.situacao strong{color:var(--ouro-claro)}
+.acoes{display:flex;gap:.8rem;flex-wrap:wrap}
+.botao{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;border:1px solid var(--ouro);color:var(--ouro-claro);text-decoration:none;font-weight:700;border-radius:3px}
+.botao:hover{background:rgba(200,165,90,.12);color:var(--ouro-claro)}
+.botao.cheio{background:var(--ouro);color:var(--obsidiana)}
+.botao.cheio:hover{background:var(--ouro-claro);color:var(--obsidiana)}
+
+/* Sumário fixo */
+.sumario{position:sticky;top:0;z-index:10;background:rgba(16,20,27,.94);backdrop-filter:blur(6px);border-block:1px solid var(--linha)}
+.sumario ul{list-style:none;margin:0;padding:.55rem 0;display:flex;gap:.4rem 1.2rem;overflow-x:auto;scrollbar-width:thin}
+.sumario a{white-space:nowrap;text-decoration:none;color:var(--pergaminho);font-size:1rem;padding:.2rem 0;border-bottom:2px solid transparent}
+.sumario a:hover{color:var(--ciano);border-bottom-color:var(--ciano)}
+
+/* Seções */
+section.bloco{padding:3.2rem 0 1rem;scroll-margin-top:3.4rem}
+.cabeca{display:grid;gap:.6rem;margin-bottom:1.8rem;max-width:72ch}
+.cabeca h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.cabeca p{color:var(--pergaminho-suave);margin:0}
+.filete{height:1px;background:linear-gradient(90deg,var(--ouro),transparent);margin-top:.4rem}
+
+/* Fólios dos projetos */
+.folios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.folio{display:grid;grid-template-columns:4.6rem 1fr;gap:1.1rem;padding:1.2rem 1.2rem 1rem;background:var(--onix);border:1px solid rgba(200,165,90,.18);border-top:2px solid var(--ouro);border-radius:3px;scroll-margin-top:4rem}
+.folio:target{outline:2px solid var(--ciano);outline-offset:3px;background:var(--onix-2)}
+.folio.destaque{border-top-color:var(--ciano)}
+.inicial{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:.35rem;padding:.6rem 0;border:1px solid var(--linha);background:linear-gradient(180deg,rgba(200,165,90,.12),rgba(200,165,90,.02));border-radius:2px;height:max-content}
+.inicial .cod{font-family:var(--texto);font-weight:700;font-size:1.75rem;color:var(--ouro);font-variant-numeric:lining-nums;letter-spacing:.02em}
+.inicial .emo{font-size:1.5rem;line-height:1}
+.folio h3{font-family:var(--texto);font-size:1.28rem;color:var(--pergaminho);margin:.1rem 0 .5rem}
+.folio p{color:var(--pergaminho);font-size:1.06rem}
+.folio dl{margin:.4rem 0 .6rem;display:grid;gap:.45rem}
+.folio dt{font-weight:700;color:var(--ouro-claro);font-size:.98rem}
+.folio dd{margin:0;font-size:1.02rem}
+.elo{font-family:var(--texto);font-weight:700;font-size:.98rem;font-variant-numeric:lining-nums;padding:.02rem .38rem;border:1px solid rgba(79,209,217,.45);border-radius:2px;text-decoration:none;white-space:nowrap}
+.elo:hover{background:rgba(79,209,217,.12)}
+.pendente{font-size:.93rem;color:var(--pergaminho-suave);font-style:italic;margin:0}
+.selo{display:inline-block;font-size:.85rem;font-weight:700;color:var(--obsidiana);background:var(--ciano);padding:.05rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:.12em}
+
+/* Pilares D1 */
+.pilares{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:1.2rem 0 1.4rem}
+.pilar{padding:1rem;border:1px solid var(--linha);border-radius:3px;background:var(--onix)}
+.pilar h3{font-size:1.1rem;margin-bottom:.4rem}
+.pilar p{margin:0;font-size:1.02rem;color:var(--pergaminho)}
+.notas-d1{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* Mapa */
+.mapa-caixa{border:1px solid var(--linha);border-radius:3px;background:var(--onix);padding:.6rem;overflow-x:auto}
+.mapa-caixa svg{display:block;width:100%;min-width:760px;height:auto}
+.mapa text{font-family:var(--texto)}
+.mapa .no rect{fill:#141A23;stroke:var(--ouro);stroke-width:1.2}
+.mapa .no.ponte rect{fill:#13303A;stroke:var(--ciano);stroke-width:1.6}
+.mapa .no text{fill:var(--pergaminho);font-size:15px;text-anchor:middle;dominant-baseline:middle}
+.mapa .no .cod{font-weight:700;fill:var(--ouro);font-variant-numeric:lining-nums}
+.mapa .no.ponte .cod{fill:var(--ciano)}
+.mapa .seta{fill:none;stroke:var(--ciano);stroke-width:1.8}
+.mapa .faixa rect{fill:rgba(200,165,90,.10);stroke:var(--ouro);stroke-width:1}
+.mapa .faixa text{fill:var(--ouro-claro);font-size:15px;text-anchor:middle;dominant-baseline:middle}
+.mapa .grupo{fill:var(--pergaminho-suave);font-size:14px;font-weight:700}
+.mapa .moldura-d1{fill:none;stroke:#7FCB8E;stroke-width:1.4;stroke-dasharray:6 6}
+.mapa .rotulo-d1{fill:#9FE0AA;font-size:14px;font-weight:700;text-anchor:middle}
+.mapa .rotulo-d1-fundo{fill:var(--onix)}
+.dica-mapa{display:none;color:var(--pergaminho-suave);font-size:1rem;margin:0 0 .6rem}
+details.texto-mapa{margin-top:1rem;max-width:72ch}
+details.texto-mapa summary{cursor:pointer;color:var(--ouro-claro);font-weight:700}
+details.texto-mapa ul{padding-left:1.2rem}
+
+/* Atenção */
+.alertas{display:grid;gap:1rem;max-width:80ch}
+.alerta{padding:1rem 1.2rem;border-left:4px solid var(--ambar);background:rgba(221,170,69,.07);border-radius:0 3px 3px 0}
+.alerta.critico{border-left-color:var(--lacre);background:rgba(210,96,78,.08)}
+.alerta h3{font-family:var(--texto);font-size:1.15rem;color:var(--pergaminho);margin-bottom:.4rem}
+.alerta p{margin:0 0 .5rem}
+.alerta ul{margin:.2rem 0 .6rem;padding-left:1.2rem}
+.origem{font-size:.95rem;color:var(--pergaminho-suave);margin:0}
+
+/* Prioridades */
+.prioridades{list-style:none;counter-reset:p;padding:0;margin:0;display:grid;gap:.9rem;max-width:80ch}
+.prioridades li{counter-increment:p;display:grid;grid-template-columns:3rem 1fr;gap:1rem;align-items:start;padding:1rem;border:1px solid var(--linha);border-radius:3px;background:var(--onix)}
+.prioridades li::before{content:counter(p);font-family:var(--texto);font-variant-numeric:lining-nums;font-weight:700;font-size:1.9rem;color:var(--ouro);text-align:center;line-height:1}
+.prioridades strong{color:var(--ouro-claro)}
+.prioridades p{margin:.3rem 0 0;color:var(--pergaminho-suave)}
+
+/* Curiosidades */
+.curiosidades{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.curiosidades li{padding:1rem 1.1rem;border:1px solid var(--linha);border-radius:3px;background:var(--onix)}
+.curiosidades h3{font-family:var(--texto);font-size:1.12rem;color:var(--ouro-claro);margin-bottom:.4rem}
+.curiosidades p{margin:0 0 .4rem;font-size:1.04rem}
+
+/* Fontes */
+.fontes{padding-left:1.4rem;max-width:90ch}
+.fontes li{margin-bottom:.55rem;font-size:1.02rem}
+.fontes .data{color:var(--pergaminho-suave)}
+
+/* Rodapé */
+.rodape{margin-top:3.5rem;border-top:1px solid var(--linha);padding:2rem 0 3rem;color:var(--pergaminho-suave);font-size:1rem}
+.rodape .moldura{display:grid;grid-template-columns:2fr 1fr;gap:2rem}
+.rodape strong{color:var(--pergaminho)}
+.rodape ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+
+@media (max-width:900px){
+  .abertura .moldura{grid-template-columns:1fr;gap:1.6rem}
+  .brasao{max-width:260px;margin-inline:auto}
+  .folios,.curiosidades{grid-template-columns:1fr}
+  .pilares{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .notas-d1,.rodape .moldura{grid-template-columns:1fr}
+  .dica-mapa{display:block}
+}
+@media (max-width:520px){
+  body{font-size:1.06rem}
+  .folio{grid-template-columns:1fr;gap:.6rem}
+  .inicial{flex-direction:row;justify-content:flex-start;padding:.35rem .7rem;width:max-content}
+  .pilares{grid-template-columns:1fr}
+  .prioridades li{grid-template-columns:2.2rem 1fr}
+}
+@media print{
+  body{background:#fff;color:#111}
+  .sumario,.acoes,.saltar{display:none}
+  .folio,.pilar,.curiosidades li,.prioridades li{background:#fff;break-inside:avoid}
+  h1,h2,h3,.folio h3,.folio p,.pilar p{color:#111}
+}
+</style>
+</head>
+<body>
+<a class="saltar" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topo">
+  <div class="moldura">
+    <a class="marca" href="#titulo">⚜️ Projeto 360X</a>
+    <nav aria-label="Navegação do portal"><a href="../">Voltar ao portal</a></nav>
+  </div>
+</header>
+
+<section class="abertura" aria-labelledby="titulo">
+  <div class="moldura">
+    <svg class="brasao" viewBox="0 0 320 440" role="group" aria-labelledby="brasao-titulo brasao-desc" xmlns="http://www.w3.org/2000/svg">
+      <title id="brasao-titulo">Brasão da Carteira Brasil 360X</title>
+      <desc id="brasao-desc">Escudo esquartelado: cada quarto leva a um eixo. A, educação e talento. B, saúde. C, desenvolvimento nacional. D, autonomia motivada.</desc>
+      <defs>
+        <clipPath id="escudo"><path d="M30 24 H290 V190 C290 285 215 345 160 374 C105 345 30 285 30 190 Z"/></clipPath>
+      </defs>
+      <g clip-path="url(#escudo)">
+        <rect x="30" y="24" width="260" height="56" fill="#0B0F15"/>
+        <a href="#eixo-a" aria-label="Eixo A: Educação e talento">
+          <rect class="q" x="30" y="80" width="130" height="146" fill="#12303A"/>
+          <text x="95" y="148" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="46" fill="#C8A55A">A</text>
+          <text x="95" y="195" text-anchor="middle" font-size="26">🎓</text>
+        </a>
+        <a href="#eixo-b" aria-label="Eixo B: Saúde perto de casa">
+          <rect class="q" x="160" y="80" width="130" height="146" fill="#2A2316"/>
+          <text x="225" y="148" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="46" fill="#C8A55A">B</text>
+          <text x="225" y="195" text-anchor="middle" font-size="26">🏥</text>
+        </a>
+        <a href="#eixo-c" aria-label="Eixo C: Desenvolvimento nacional">
+          <rect class="q" x="30" y="226" width="130" height="160" fill="#2A2316"/>
+          <text x="104" y="284" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="46" fill="#C8A55A">C</text>
+          <text x="106" y="326" text-anchor="middle" font-size="26">⛏️</text>
+        </a>
+        <a href="#eixo-d" aria-label="Eixo D: Cultura de autonomia motivada">
+          <rect class="q" x="160" y="226" width="130" height="160" fill="#12303A"/>
+          <text x="216" y="284" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="46" fill="#C8A55A">D</text>
+          <text x="214" y="326" text-anchor="middle" font-size="26">🌱</text>
+        </a>
+        <path d="M30 80 H290 M160 80 V380 M30 226 H290" stroke="#C8A55A" stroke-width="2.5" fill="none" pointer-events="none"/>
+        <text x="160" y="62" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="30" letter-spacing="6" fill="#E4CB8C" pointer-events="none">360X</text>
+      </g>
+      <path class="contorno" pathLength="1" d="M30 24 H290 V190 C290 285 215 345 160 374 C105 345 30 285 30 190 Z" fill="none" stroke="#C8A55A" stroke-width="4" pointer-events="none"/>
+      <path d="M12 394 H308 L294 410 L308 426 H12 L26 410 Z" fill="#171D27" stroke="#C8A55A" stroke-width="1.5"/>
+      <text x="160" y="414.5" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="600" font-size="12.5" letter-spacing=".6" fill="#E4CB8C">Forte, inteligente, honrado e justo</text>
+    </svg>
+
+    <div>
+      <h1 id="titulo">Carteira Brasil 360X</h1>
+      <p class="tese">Descobrir cedo o estilo e o talento de cada pessoa, cuidar dela perto de casa e financiar isso valorizando as riquezas do país.</p>
+      <p class="lema">Prevenir uma emergência vale mais do que tratá-la. São quinze propostas em quatro eixos para educação, saúde e desenvolvimento do Brasil, ligadas entre si como um único plano.</p>
+      <p class="situacao">📜 <strong>Situação:</strong> propostas em debate. Nenhum projeto desta carteira foi iniciado; custos, responsáveis e metas estão a definir.</p>
+      <div class="acoes">
+        <a class="botao cheio" href="#eixo-a">🧭 Conhecer os eixos</a>
+        <a class="botao" href="#mapa">🗺️ Ver o mapa de vínculos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="sumario" aria-label="Sumário da página">
+  <div class="moldura">
+    <ul>
+      <li><a href="#eixo-a">🎓 Educação</a></li>
+      <li><a href="#eixo-b">🏥 Saúde</a></li>
+      <li><a href="#eixo-c">⛏️ Desenvolvimento</a></li>
+      <li><a href="#eixo-d">🌱 Autonomia</a></li>
+      <li><a href="#mapa">🗺️ Mapa</a></li>
+      <li><a href="#atencao">⚠️ Pontos de atenção</a></li>
+      <li><a href="#prioridades">🎯 Prioridades</a></li>
+      <li><a href="#curiosidades">🤓 Curiosidades</a></li>
+      <li><a href="#fontes">📚 Fontes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="conteudo">
+
+<!-- EIXO A -->
+<section class="bloco" id="eixo-a" aria-labelledby="h-eixo-a">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-eixo-a">🎓 Eixo A: Educação e talento</h2>
+      <p>Não basta ter o dom: é preciso ter o estilo e gostar do que se faz, ou o trabalho não sai bem feito. Às vezes alguém faz melhor uma coisa para a qual não tem o dom, mas tem o estilo. A proposta é observar cada criança desde cedo, sem cobrança, e formar mente e corpo juntos.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="folios">
+      <article class="folio" id="a1">
+        <div class="inicial" aria-hidden="true"><span class="cod">A1</span><span class="emo">🔍</span></div>
+        <div>
+          <h3><span class="sr-only">A1: </span>Mapa de Perfil Precoce</h3>
+          <p>Maternal 1 e 2 livres, sem cobrança. Avaliações sem reprovação, para registrar o que a criança gosta de fazer e onde se sai bem: dom, estilo e gosto. A partir daí, a formação cognitiva e atlética é direcionada aos poucos.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Instrumento de observação e piloto em uma escola.</dd>
+            <dt>🔗 Vínculos</dt><dd>Depende de <a class="elo" href="#b1">B1</a>; alimenta <a class="elo" href="#a2">A2</a> e <a class="elo" href="#a4">A4</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="a2">
+        <div class="inicial" aria-hidden="true"><span class="cod">A2</span><span class="emo">🏃</span></div>
+        <div>
+          <h3><span class="sr-only">A2: </span>Trilha Aluno-Atleta</h3>
+          <p>Um bom aluno precisa ser um bom atleta, e um bom atleta precisa ser um bom aluno. Formação cognitiva e atlética sempre juntas, inspiradas no modelo dos Estados Unidos e adaptadas à escola brasileira.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Comparativo Brasil e Estados Unidos e proposta de grade integrada.</dd>
+            <dt>🔗 Vínculos</dt><dd>Recebe de <a class="elo" href="#a1">A1</a>; alimenta <a class="elo" href="#a4">A4</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="a3">
+        <div class="inicial" aria-hidden="true"><span class="cod">A3</span><span class="emo">🧠</span></div>
+        <div>
+          <h3><span class="sr-only">A3: </span>Escola Neuroinclusiva</h3>
+          <p>No Brasil e no mundo, muitas pessoas são neurodiversas ou têm TDAH, e o modelo de ensino não foi pensado para elas. A proposta adapta o método de ensino a esses perfis e forma professores para isso.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Guia prático para professores.</dd>
+            <dt>🔗 Vínculos</dt><dd>Depende de <a class="elo" href="#b1">B1</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="a4">
+        <div class="inicial" aria-hidden="true"><span class="cod">A4</span><span class="emo">🥇</span></div>
+        <div>
+          <h3><span class="sr-only">A4: </span>Programa Gohan: cientistas e atletas</h3>
+          <p>Valorizar cientistas e atletas olímpicos na mesma medida, com bolsa, carreira e reconhecimento. O ideal é a pessoa forte, inteligente, honrada e justa. Meta de longo prazo: o primeiro Prêmio Nobel conquistado pelo Brasil e mais pódios olímpicos.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Proposta de bolsa dupla para ciência e esporte.</dd>
+            <dt>🔗 Vínculos</dt><dd>Recebe de <a class="elo" href="#a1">A1</a> e <a class="elo" href="#a2">A2</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EIXO B -->
+<section class="bloco" id="eixo-b" aria-labelledby="h-eixo-b">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-eixo-b">🏥 Eixo B: Saúde perto de casa</h2>
+      <p>UPAs e hospitais lotam porque as pessoas só procuram atendimento quando já estão muito doentes, e a UBS gasta a agenda renovando receitas. A proposta inverte a lógica: prevenir, internar perto da família e deixar os grandes hospitais para o que é raro e complexo. Com a expansão das faculdades de medicina, o momento é oportuno.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="folios">
+      <article class="folio destaque" id="b1">
+        <div class="inicial" aria-hidden="true"><span class="cod">B1</span><span class="emo">💊</span></div>
+        <div>
+          <h3><span class="sr-only">B1: </span>TDAH e neurodiversidade no SUS <span class="selo">Prioridade 1</span></h3>
+          <p>Diagnóstico precoce de TDAH e neurodiversidade na rede pública, com linha de cuidado e medicação gratuita ou com redução de impostos. É a ponte entre saúde e educação.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Nota técnica de duas páginas. Veja o <a href="#atencao-b1">ponto de atenção</a> sobre a situação atual no SUS.</dd>
+            <dt>🔗 Vínculos</dt><dd>Viabiliza <a class="elo" href="#a1">A1</a> e <a class="elo" href="#a3">A3</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b2">
+        <div class="inicial" aria-hidden="true"><span class="cod">B2</span><span class="emo">🛏️</span></div>
+        <div>
+          <h3><span class="sr-only">B2: </span>UBS Miniestação Hospitalar</h3>
+          <p>A UBS deixa de ser só renovadora de receitas e passa a ter leitos de internação e de semi-intensiva, cobrindo os níveis de complexidade da sua área. O paciente fica perto de casa, recebe alta mais cedo, tem a família por perto e é cuidado por um médico de família que o conhece por inteiro.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Modelo de UBS-polo com dimensionamento de equipe e custo.</dd>
+            <dt>🔗 Vínculos</dt><dd>Recebe capacidade de <a class="elo" href="#b4">B4</a> e <a class="elo" href="#b5">B5</a>; viabiliza <a class="elo" href="#b3">B3</a>; gera <a class="elo" href="#b8">B8</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b3">
+        <div class="inicial" aria-hidden="true"><span class="cod">B3</span><span class="emo">🚑</span></div>
+        <div>
+          <h3><span class="sr-only">B3: </span>UBS-UPA integrada</h3>
+          <p>Toda UBS também atende urgência. As UPAs deixam de existir como unidade separada e são absorvidas pela rede de UBS, com suporte melhor à população.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Fluxo de urgência e critérios de transferência.</dd>
+            <dt>🔗 Vínculos</dt><dd>Depende de <a class="elo" href="#b2">B2</a>; viabiliza <a class="elo" href="#b6">B6</a>; gera <a class="elo" href="#b8">B8</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b4">
+        <div class="inicial" aria-hidden="true"><span class="cod">B4</span><span class="emo">📝</span></div>
+        <div>
+          <h3><span class="sr-only">B4: </span>Fim da UBS renovadora de receita</h3>
+          <p>Um fluxo próprio para renovar receitas de uso contínuo, com farmácia, enfermagem e telessaúde, libera a agenda clínica para quem precisa de consulta.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Protocolo de renovação.</dd>
+            <dt>🔗 Vínculos</dt><dd>Libera capacidade para <a class="elo" href="#b2">B2</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b5">
+        <div class="inicial" aria-hidden="true"><span class="cod">B5</span><span class="emo">🛡️</span></div>
+        <div>
+          <h3><span class="sr-only">B5: </span>Prevenção de emergências</h3>
+          <p>Não existe nada melhor do que prevenir uma emergência. Busca ativa de quem está perto de descompensar, antes que precise de UPA ou hospital.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Lista de condições-alvo e indicadores.</dd>
+            <dt>🔗 Vínculos</dt><dd>Libera capacidade para <a class="elo" href="#b2">B2</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b6">
+        <div class="inicial" aria-hidden="true"><span class="cod">B6</span><span class="emo">🦠</span></div>
+        <div>
+          <h3><span class="sr-only">B6: </span>Descentralização hospitalar</h3>
+          <p>Grandes hospitais ficam para casos raros e complexos. A hipótese a testar: com menos pacientes concentrados num único centro, diminui a seleção de bactérias cada vez mais resistentes, além do tempo de internação e dos gastos.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Indicadores de ocupação, tempo de internação e perfil de resistência bacteriana.</dd>
+            <dt>🔗 Vínculos</dt><dd>Depende de <a class="elo" href="#b3">B3</a>; abre espaço para <a class="elo" href="#b7">B7</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b7">
+        <div class="inicial" aria-hidden="true"><span class="cod">B7</span><span class="emo">🔬</span></div>
+        <div>
+          <h3><span class="sr-only">B7: </span>Hospitais universitários como polos de pesquisa</h3>
+          <p>Sem a lotação de doenças do dia a dia, os centros universitários ganham espaço para pesquisa e tratamento de doenças novas e complexas, como as hematológicas e reumatológicas.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Proposta de perfil assistencial por nível de atenção.</dd>
+            <dt>🔗 Vínculos</dt><dd>Depende de <a class="elo" href="#b6">B6</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="b8">
+        <div class="inicial" aria-hidden="true"><span class="cod">B8</span><span class="emo">👩‍⚕️</span></div>
+        <div>
+          <h3><span class="sr-only">B8: </span>Força de trabalho multiprofissional</h3>
+          <p>A rede ampliada abre vagas para todas as profissões da saúde: médicos, enfermeiros, farmacêuticos, fisioterapeutas, psicólogos, dentistas, biomédicos, nutricionistas, estomaterapeutas, podólogos, acupunturistas, homeopatas, esteticistas e outras. Mais gente perto do paciente, com assistência mais humanizada.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Mapa de profissões por tipo de unidade.</dd>
+            <dt>🔗 Vínculos</dt><dd>Consequência de <a class="elo" href="#b2">B2</a> e <a class="elo" href="#b3">B3</a>.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EIXO C -->
+<section class="bloco" id="eixo-c" aria-labelledby="h-eixo-c">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-eixo-c">⛏️ Eixo C: Desenvolvimento nacional</h2>
+      <p>Saúde, educação, política, segurança e economia precisam evoluir juntas. Isso pede organização, dedicação, experiência, educação e apoio global. Valorizar riquezas que o país ainda não aproveita é uma das fontes para financiar tudo isso.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="folios">
+      <article class="folio" id="c1">
+        <div class="inicial" aria-hidden="true"><span class="cod">C1</span><span class="emo">🚀</span></div>
+        <div>
+          <h3><span class="sr-only">C1: </span>Plano integrado “50 anos em 5”</h3>
+          <p>Evolução paralela e simultânea de saúde, educação, política, segurança e economia, com apoio global. É o guarda-chuva de toda a carteira.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Matriz de metas por eixo.</dd>
+            <dt>🔗 Vínculos</dt><dd>Abrange todos os projetos.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+      <article class="folio" id="c2">
+        <div class="inicial" aria-hidden="true"><span class="cod">C2</span><span class="emo">⛏️</span></div>
+        <div>
+          <h3><span class="sr-only">C2: </span>Riquezas estratégicas</h3>
+          <p>Valorizar o nióbio e outros metais e minerais que o país pouco aproveita: agregar valor aqui, em vez de exportar a matéria bruta.</p>
+          <dl>
+            <dt>🪜 Primeiro passo</dt><dd>Levantamento de reservas, cadeia produtiva e destino da receita.</dd>
+            <dt>🔗 Vínculos</dt><dd>Fonte de financiamento dos demais projetos.</dd>
+          </dl>
+          <p class="pendente">Custo, responsável e meta: a definir.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EIXO D -->
+<section class="bloco" id="eixo-d" aria-labelledby="h-eixo-d">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-eixo-d">🌱 Eixo D: Cultura de autonomia motivada</h2>
+      <p>Princípio que vale para todos os outros eixos: projeto sem pressão e sem cobrança por resultados. Pessoas livres, empolgadas e motivadas fazem o melhor que podem por vontade própria, porque gostam do que fazem.</p>
+      <div class="filete"></div>
+    </div>
+    <article class="folio" id="d1">
+      <div class="inicial" aria-hidden="true"><span class="cod">D1</span><span class="emo">🌱</span></div>
+      <div>
+        <h3><span class="sr-only">D1: </span>Quatro pilares para escola, UBS, pesquisa e esporte</h3>
+        <div class="pilares">
+          <div class="pilar"><h3>🕊️ Autonomia</h3><p>A pessoa escolhe como fazer; a meta é combinada, não imposta.</p></div>
+          <div class="pilar"><h3>💪 Competência</h3><p>Desafio na medida certa e retorno rápido sobre o que funcionou.</p></div>
+          <div class="pilar"><h3>🤝 Vínculo</h3><p>Equipe pequena, que se conhece e se apoia.</p></div>
+          <div class="pilar"><h3>🎯 Propósito</h3><p>Todos sabem para quem o trabalho serve.</p></div>
+        </div>
+        <div class="notas-d1">
+          <p>🔄 <strong>Acompanhar em vez de cobrar.</strong> Medir o resultado para aprender, não para punir. É a mesma lógica da avaliação sem reprovação de <a class="elo" href="#a1">A1</a>.</p>
+          <p>🩺 <strong>Um piso que não se negocia.</strong> Em saúde, a segurança do paciente segue obrigatória, com checklists e protocolos críticos: liberdade no como, firmeza no que protege a vida.</p>
+        </div>
+        <dl>
+          <dt>🪜 Primeiro passo</dt><dd>Carta de princípios de uma página, para usar no piloto de <a class="elo" href="#a1">A1</a> ou de <a class="elo" href="#b2">B2</a>.</dd>
+        </dl>
+        <p class="pendente">Base conceitual: Teoria da Autodeterminação. Veja as <a href="#curiosidades">curiosidades</a>.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section class="bloco" id="mapa" aria-labelledby="h-mapa">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-mapa">🗺️ Mapa de vínculos</h2>
+      <p>Como uma proposta destrava a outra. As setas indicam quem viabiliza quem; B1 é a ponte entre saúde e educação.</p>
+      <div class="filete"></div>
+    </div>
+    <p class="dica-mapa">↔️ Arraste o mapa para o lado para ver tudo.</p>
+    <div class="mapa-caixa">
+      <svg class="mapa" viewBox="0 0 980 576" role="img" aria-labelledby="mapa-titulo" xmlns="http://www.w3.org/2000/svg">
+        <title id="mapa-titulo">Mapa de vínculos entre as quinze propostas. A versão em texto está logo abaixo.</title>
+        <defs>
+          <marker id="ponta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 Z" fill="#4FD1D9"/>
+          </marker>
+        </defs>
+
+        <rect class="moldura-d1" x="8" y="8" width="964" height="544" rx="6"/>
+        <rect class="rotulo-d1-fundo" x="320" y="540" width="340" height="26"/>
+        <text class="rotulo-d1" x="490" y="558">🌱 D1 Autonomia motivada envolve tudo</text>
+
+        <g class="faixa">
+          <rect x="24" y="24" width="932" height="44" rx="3"/>
+          <text x="490" y="47">🚀 C1 Plano “50 anos em 5”: guarda-chuva de todos os projetos</text>
+        </g>
+
+        <text class="grupo" x="40" y="104">🎓 Educação e talento</text>
+        <text class="grupo" x="540" y="104">🏥 Saúde perto de casa</text>
+
+        <g class="no"><rect x="170" y="120" width="120" height="40" rx="3"/><text x="230" y="141"><tspan class="cod">A1</tspan> Perfil</text></g>
+        <g class="no"><rect x="40" y="220" width="120" height="40" rx="3"/><text x="100" y="241"><tspan class="cod">A2</tspan> Aluno-atleta</text></g>
+        <g class="no"><rect x="300" y="220" width="120" height="40" rx="3"/><text x="360" y="241"><tspan class="cod">A3</tspan> Escola</text></g>
+        <g class="no"><rect x="170" y="320" width="120" height="40" rx="3"/><text x="230" y="341"><tspan class="cod">A4</tspan> Gohan</text></g>
+
+        <g class="no ponte"><rect x="380" y="120" width="130" height="40" rx="3"/><text x="445" y="141"><tspan class="cod">B1</tspan> TDAH no SUS</text></g>
+
+        <g class="no"><rect x="560" y="120" width="120" height="40" rx="3"/><text x="620" y="141"><tspan class="cod">B4</tspan> Receitas</text></g>
+        <g class="no"><rect x="560" y="220" width="120" height="40" rx="3"/><text x="620" y="241"><tspan class="cod">B5</tspan> Prevenção</text></g>
+        <g class="no"><rect x="710" y="170" width="110" height="40" rx="3"/><text x="765" y="191"><tspan class="cod">B2</tspan> UBS leitos</text></g>
+        <g class="no"><rect x="845" y="170" width="105" height="40" rx="3"/><text x="897" y="191"><tspan class="cod">B3</tspan> UBS-UPA</text></g>
+        <g class="no"><rect x="845" y="280" width="105" height="40" rx="3"/><text x="897" y="301"><tspan class="cod">B6</tspan> Descentr.</text></g>
+        <g class="no"><rect x="845" y="390" width="105" height="40" rx="3"/><text x="897" y="411"><tspan class="cod">B7</tspan> Pesquisa</text></g>
+        <g class="no"><rect x="700" y="390" width="120" height="40" rx="3"/><text x="760" y="411"><tspan class="cod">B8</tspan> Equipes</text></g>
+
+        <path class="seta" marker-end="url(#ponta)" d="M380 140 H294"/>
+        <path class="seta" marker-end="url(#ponta)" d="M470 160 V240 H424"/>
+        <path class="seta" marker-end="url(#ponta)" d="M200 160 V190 H100 V216"/>
+        <path class="seta" marker-end="url(#ponta)" d="M230 160 V316"/>
+        <path class="seta" marker-end="url(#ponta)" d="M100 260 V340 H166"/>
+        <path class="seta" marker-end="url(#ponta)" d="M680 140 H694 V190 H706"/>
+        <path class="seta" d="M680 240 H694 V190"/>
+        <path class="seta" marker-end="url(#ponta)" d="M820 190 H841"/>
+        <path class="seta" marker-end="url(#ponta)" d="M897 210 V276"/>
+        <path class="seta" marker-end="url(#ponta)" d="M897 320 V386"/>
+        <path class="seta" marker-end="url(#ponta)" d="M755 210 V386"/>
+        <path class="seta" marker-end="url(#ponta)" d="M865 210 V245 H795 V386"/>
+
+        <g class="faixa">
+          <rect x="24" y="470" width="932" height="44" rx="3"/>
+          <text x="490" y="493">⛏️ C2 Riquezas estratégicas: fonte de financiamento</text>
+        </g>
+      </svg>
+    </div>
+    <details class="texto-mapa">
+      <summary>📖 Ler o mapa em texto</summary>
+      <ul>
+        <li><strong>B1</strong> viabiliza A1 e A3: sem diagnóstico e tratamento, o mapa de perfil e a escola neuroinclusiva não funcionam.</li>
+        <li><strong>A1</strong> alimenta A2 e A4; <strong>A2</strong> alimenta A4.</li>
+        <li><strong>B4</strong> e <strong>B5</strong> liberam capacidade para B2.</li>
+        <li><strong>B2</strong> viabiliza B3, que viabiliza B6, que abre espaço para B7.</li>
+        <li><strong>B8</strong> é consequência de B2 e B3.</li>
+        <li><strong>C2</strong> é fonte de financiamento; <strong>C1</strong> é o guarda-chuva; <strong>D1</strong> vale para todos.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<!-- ATENÇÃO -->
+<section class="bloco" id="atencao" aria-labelledby="h-atencao">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-atencao">⚠️ Pontos de atenção</h2>
+      <p>O que precisa ser resolvido antes de qualquer piloto. Fato verificado e análise preliminar estão separados em cada item.</p>
+      <div class="filete"></div>
+    </div>
+    <div class="alertas">
+      <div class="alerta critico" id="atencao-b1">
+        <h3>🔴 B1: hoje o SUS não oferta medicamento para TDAH</h3>
+        <ul>
+          <li>Em 2021, a Conitec recomendou não incorporar metilfenidato e lisdexanfetamina para crianças e adolescentes de 6 a 17 anos, e a lisdexanfetamina também foi negada para adultos. Os motivos citados foram evidência de baixa qualidade e impacto orçamentário alto. <a href="#f1">[1]</a> <a href="#f5">[5]</a></li>
+          <li>O Protocolo Clínico de TDAH de 2022 não prevê tratamento com estimulantes, e os dois medicamentos estão fora da RENAME 2024. <a href="#f2">[2]</a> <a href="#f3">[3]</a> <a href="#f4">[4]</a></li>
+          <li>Parecer técnico de outubro de 2025 confirma que o SUS não oferta medicamentos para TDAH. <a href="#f6">[6]</a></li>
+          <li>Estados e municípios podem fornecer tecnologias que não estão nas listas federais. <a href="#f5">[5]</a></li>
+        </ul>
+        <p><strong>Caminhos possíveis:</strong> novo pedido de incorporação à Conitec com evidência atualizada, ou oferta estadual ou municipal.</p>
+        <p class="origem">Fontes oficiais conferidas em 30/09/2026 e 22/10/2026. Até essas datas, não localizamos nova incorporação.</p>
+      </div>
+      <div class="alerta">
+        <h3>🟡 A1: não rotular a criança cedo demais</h3>
+        <p>Aptidão observada entre 2 e 4 anos tende a prever pouco o desempenho adulto. O mapa deve funcionar como perfil de interesses, revisado todo ano, e nunca como classificação.</p>
+        <p class="origem">Análise preliminar, sem fonte direta: requer revisão de literatura antes do piloto.</p>
+      </div>
+      <div class="alerta">
+        <h3>🟡 B2 e B3: semi-intensiva exige estrutura</h3>
+        <p>Leito de semi-intensiva pede equipe 24 horas, laboratório e imagem. Unidades com poucos leitos tendem a custar mais por leito e a ter menos volume de casos para manter a segurança. O desenho mais defensável é uma UBS-polo por território, não todas as UBS ao mesmo tempo.</p>
+        <p class="origem">Análise preliminar, sem fonte direta: requer estudo de custo e dimensionamento.</p>
+      </div>
+      <div class="alerta">
+        <h3>🟡 D1: liberdade com acompanhamento</h3>
+        <p>Sem medir, ninguém aprende. A carteira troca cobrança por acompanhamento, e em saúde mantém obrigatórios os protocolos que protegem o paciente.</p>
+        <p class="origem">Base conceitual nas <a href="#curiosidades">curiosidades</a> [10] e [11].</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIORIDADES -->
+<section class="bloco" id="prioridades" aria-labelledby="h-prioridades">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-prioridades">🎯 Por onde começar</h2>
+      <p>Ordem sugerida para os primeiros passos.</p>
+      <div class="filete"></div>
+    </div>
+    <ol class="prioridades">
+      <li><div><strong>💊 B1: nota técnica sobre TDAH no SUS</strong><p>O problema está documentado, o interlocutor é claro e destrava o eixo de educação.</p></div></li>
+      <li><div><strong>🔍 A1: instrumento de observação e piloto em uma escola</strong><p>Testa a ideia central da carteira em escala pequena e reversível.</p></div></li>
+      <li><div><strong>🛏️ B2: modelo de UBS-polo com equipe e custo</strong><p>Responde à pergunta que decide se o eixo de saúde é viável.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CURIOSIDADES -->
+<section class="bloco" id="curiosidades" aria-labelledby="h-curiosidades">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-curiosidades">🤓 Curiosidades que conversam com a carteira</h2>
+      <p>Histórias e estudos que ajudam a pensar as propostas. Não são provas de que elas funcionam.</p>
+      <div class="filete"></div>
+    </div>
+    <ul class="curiosidades">
+      <li>
+        <h3>🏰 A UBS com leitos já foi pensada em 1920</h3>
+        <p>Na Inglaterra, o Relatório Dawson propôs centros de saúde primários com leitos médicos, cirúrgicos e de maternidade, atendidos pelos próprios generalistas do distrito. Ficou como proposta e nunca foi implantado por inteiro. Lembra muito a <a class="elo" href="#b2">B2</a>. <a href="#f7">[7]</a></p>
+      </li>
+      <li>
+        <h3>🧬 O Nobel que quase foi brasileiro</h3>
+        <p>Peter Medawar nasceu no Brasil em 1915. Teve negado o pedido de dispensa do serviço militar brasileiro, renunciou à cidadania e, em 1960, recebeu o Nobel de Fisiologia ou Medicina pela descoberta da tolerância imunológica adquirida. <a href="#f8">[8]</a></p>
+      </li>
+      <li>
+        <h3>⚽ Os anos de experimentar</h3>
+        <p>No modelo de desenvolvimento esportivo de Côté, a fase de cerca de 6 a 13 anos é de experimentar vários esportes e brincar; a especialização vem depois. Combina com deixar a criança livre antes de direcionar, em <a class="elo" href="#a1">A1</a> e <a class="elo" href="#a2">A2</a>. <a href="#f9">[9]</a></p>
+      </li>
+      <li>
+        <h3>🕯️ O problema da vela</h3>
+        <p>No experimento de Glucksberg, de 1962, o prêmio em dinheiro piorou o desempenho na versão que exigia criatividade e ajudou na versão simples. Incentivo externo pode atrapalhar o trabalho criativo, como defende <a class="elo" href="#d1">D1</a>. <a href="#f10">[10]</a></p>
+      </li>
+      <li>
+        <h3>🧠 Por que a autonomia motiva</h3>
+        <p>A Teoria da Autodeterminação, de Ryan e Deci, descreve três necessidades psicológicas básicas, autonomia, competência e vínculo, que sustentam a motivação que vem de dentro. <a href="#f11">[11]</a></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FONTES -->
+<section class="bloco" id="fontes" aria-labelledby="h-fontes">
+  <div class="moldura">
+    <div class="cabeca">
+      <h2 id="h-fontes">📚 Fontes</h2>
+      <p>Links externos abrem fontes públicas. Datas de consulta entre parênteses.</p>
+      <div class="filete"></div>
+    </div>
+    <ol class="fontes">
+      <li id="f1">Conitec. Relatório para a sociedade nº 236: metilfenidato e lisdexanfetamina para indivíduos com TDAH. 2021. <a href="https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2021/Sociedade/20210319_resoc236_metilfenidato_lisdexanfetamina_tdah.pdf/view" rel="noreferrer">Abrir</a> <span class="data">(30/09/2026)</span></li>
+      <li id="f2">Conitec. Relatório nº 733: Protocolo Clínico e Diretrizes Terapêuticas do TDAH. 2022. <a href="https://www.gov.br/conitec/pt-br/midias/relatorios/2022/20220804_Relatorio_733_PCDT_TDAH.pdf" rel="noreferrer">Abrir</a> <span class="data">(30/09/2026)</span></li>
+      <li id="f3">InfoSUS, Secretaria de Estado da Saúde de Santa Catarina. Lisdexanfetamina, dimesilato. <a href="http://infosus.saude.sc.gov.br/index.php/Lisdexanfetamina,_dimesilato" rel="noreferrer">Abrir</a> <span class="data">(30/09/2026)</span></li>
+      <li id="f4">InfoSUS, Secretaria de Estado da Saúde de Santa Catarina. Metilfenidato, cloridrato. <a href="http://infosus.saude.sc.gov.br/index.php?title=Metilfenidato%2C_cloridrato" rel="noreferrer">Abrir</a> <span class="data">(30/09/2026)</span></li>
+      <li id="f5">Câmara Municipal de Araraquara. Ministério da Saúde explica motivo para não incluir medicamentos para TDAH no SUS. <a href="https://cmararaquara.sp.gov.br/noticias/ministerio-da-saude-explica-motivo-para-nao-incluir-medicamentos-para-tdah-no-sus" rel="noreferrer">Abrir</a> <span class="data">(30/09/2026)</span></li>
+      <li id="f6">Tribunal de Justiça do Estado do Rio de Janeiro. Parecer técnico nº 4022/2025, de 02/10/2025. <a href="https://portaltj.tjrj.jus.br/documents/d/guest/parecer-4022-2025" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+      <li id="f7">Nuffield Trust. The Dawson Report, 1920, na história do NHS. <a href="https://nuffieldtrust.org.uk/files/2019-11/nhs-history-book/48-57/dawson-report.html" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+      <li id="f8">Wikipedia. Peter Medawar. <a href="https://en.wikipedia.org/wiki/Peter_Medawar" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+      <li id="f9">Varghese M, Ruparell S, LaBella C. Youth Athlete Development Models: A Narrative Review. Sports Health. 2021;14(1):20–29. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8669922/" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+      <li id="f10">Glucksberg S. The influence of strength of drive on functional fixedness and perceptual recognition. Journal of Experimental Psychology. 1962;63:36–41. <a href="https://doi.org/10.1037/h0044683" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+      <li id="f11">Ryan RM, Deci EL. Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist. 2000;55(1):68–78. <a href="https://doi.org/10.1037/0003-066X.55.1.68" rel="noreferrer">Abrir</a> <span class="data">(22/10/2026)</span></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="moldura">
+    <div>
+      <p><strong>⚜️ Projeto 360X de Aldenir Rocha de Oliveira Filho.</strong> Idealização das propostas pelo autor; organização editorial com apoio de inteligência artificial (Claude).</p>
+      <p>Versão 1.0, de 22/10/2026. Ideias registradas em 30/09/2026. Propostas não são realizações: nenhum projeto desta carteira foi iniciado, e custos, responsáveis e metas estão a definir.</p>
+    </div>
+    <ul>
+      <li><a href="../">🏛️ Portal principal</a></li>
+      <li><a href="https://github.com/aldenirfilho/NEXUS-BRASIL/tree/main/public/carteira-brasil" rel="noreferrer">💻 Código desta página</a></li>
+      <li><a href="https://github.com/aldenirfilho/NEXUS-BRASIL/issues/new" rel="noreferrer">✍️ Sugerir correção</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

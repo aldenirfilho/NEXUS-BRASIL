@@ -23,6 +23,7 @@ Portal cívico de pessoas, ideias e soluções. Iniciativa em construção, com 
 - Catálogo com 40 ideias anteriores e seis propostas iniciais para Sobral.
 - Biblioteca institucional, canvas editável, pauta, RACI, scorecard e adesão.
 - Autoavaliação voluntária com 30 itens, seis dimensões, resultado privado e carência local de três meses.
+- [Carteira Brasil 360X](public/carteira-brasil/README.md): 15 propostas em quatro eixos (educação e talento, saúde perto de casa, desenvolvimento nacional e autonomia motivada), com mapa de vínculos e fontes. Publicada em `/carteira-brasil/`; nenhum projeto iniciado.
 
 ## Executar
 

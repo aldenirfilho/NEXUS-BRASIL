@@ -33,6 +33,7 @@ Os modelos estão em branco. Scorecards, termos assinados, resultados de avalia�
 ## Dados e código
 
 - [Catálogo público de propostas](../public/propostas.json): 46 fichas preliminares; não são projetos executados.
+- [Carteira Brasil 360X](../public/carteira-brasil/README.md): 15 propostas em quatro eixos, em página autocontida; nenhum projeto iniciado.
 - [Páginas do site](../app/): conteúdo e rotas.
 - [Componentes](../components/): interface, filtros e formulários.
 - [Regras da autoavaliação](../lib/assessment.mjs): cálculo e carência.

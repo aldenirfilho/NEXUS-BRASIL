@@ -49,6 +49,28 @@ for (const f of walk(root)) {
       );
     }
 }
+const carteira = path.join(root, 'carteira-brasil', 'index.html');
+assert.ok(fs.existsSync(carteira), 'Página ausente: carteira-brasil');
+const carteiraHtml = fs.readFileSync(carteira, 'utf8');
+assert.ok(carteiraHtml.includes('lang="pt-BR"'), 'Idioma: carteira-brasil');
+const carteiraIds = [
+  ...carteiraHtml.matchAll(/<article class="folio[^"]*" id="([a-d]\d)"/g),
+].map((m) => m[1]);
+assert.equal(carteiraIds.length, 15, 'Carteira Brasil precisa de 15 propostas');
+assert.equal(
+  new Set(carteiraIds).size,
+  15,
+  'Propostas duplicadas na Carteira Brasil',
+);
+for (const m of carteiraHtml.matchAll(/href="#([^"]+)"/g))
+  assert.ok(
+    carteiraHtml.includes(`id="${m[1]}"`),
+    `Âncora ausente na Carteira Brasil: #${m[1]}`,
+  );
+for (const font of fs
+  .readdirSync(path.join(root, 'carteira-brasil', 'fonts'))
+  .filter((f) => f.endsWith('.woff2')))
+  assert.ok(carteiraHtml.includes(`fonts/${font}`), `Fonte não usada: ${font}`);
 const proposals = JSON.parse(
   fs.readFileSync(path.join(root, 'propostas.json'), 'utf8'),
 );
@@ -56,5 +78,5 @@ assert.equal(proposals.length, 46);
 assert.equal(new Set(proposals.map((p) => p.id)).size, 46);
 assert.equal(proposals.filter((p) => p.territory === 'Sobral').length, 6);
 console.log(
-  `Verificado: ${routes.length} rotas, links locais, 46 propostas e ausência dos marcadores privados.`,
+  `Verificado: ${routes.length} rotas, links locais, 46 propostas, Carteira Brasil com 15 propostas e ausência dos marcadores privados.`,
 );

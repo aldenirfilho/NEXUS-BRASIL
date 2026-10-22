@@ -24,6 +24,7 @@ O código e os documentos têm como origem principal este repositório. A config
 | Privacidade | `app/privacidade/page.tsx` |
 | Canvas e modelos | `components/project-tools.tsx`, `lib/templates.ts`, `public/documentos/` |
 | Aparência e navegação | `app/globals.css`, `components/site-shell.tsx` |
+| Carteira Brasil 360X | `public/carteira-brasil/index.html` (página autocontida, fontes locais em `fonts/`) |
 | Caminho de hospedagem | `next.config.ts`, `lib/site.ts`, `scripts/prepare-export.mjs` |
 
 Mantenha as duas cópias do catálogo de propostas iguais. Revise conjuntamente os modelos da interface e os arquivos de documentação correspondentes.
