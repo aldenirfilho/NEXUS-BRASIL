@@ -74,6 +74,7 @@ export function SiteFooter() {
             <a href={pathTo('/metodo/')}>Método NEXUS</a>
             <a href={pathTo('/biblioteca/')}>Biblioteca institucional</a>
             <a href={pathTo('/indole360/')}>ÍNDOLE 360° · consumo consciente</a>
+            <a href={pathTo('/contraste/')}>Saúde global × defesa dos EUA</a>
           </div>
           <div>
             <h3>Construa com a gente</h3>
