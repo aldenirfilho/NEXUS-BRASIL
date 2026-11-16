@@ -78,6 +78,9 @@ export function SiteFooter() {
             <a href={pathTo('/carteira-brasil/')}>
               Carteira Brasil 360X · educação e saúde
             </a>
+            <a href={pathTo('/autor/axiomas-360x.html')}>
+              ⚜️ Axiomas 360X · livro do autor
+            </a>
           </div>
           <div>
             <h3>Construa com a gente</h3>
